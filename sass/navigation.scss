@@ -1,0 +1,25 @@
+.site-header .content{
+    display: flex;
+    justify-content: space-between;
+  }
+  .site-header .mainNav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  
+  .site-header .mainNav a:hover{
+    color: #FEDB02;
+  }
+  .site-header .mainNav li{
+    display: inline-table;
+    padding: 0 20px;
+  }
+  
+  .site-header .navContainer{
+    padding: 10px 30px;
+  }
+  .site-header{
+    background-color: #000;
+  }
