@@ -1,13 +1,13 @@
 <?php get_header(); ?>
     <div class="heroBanner">
-    <div class="opacity"></div>
-    <div class="content">
-      <div class="slogan"><h1><?php the_field('banner_slogan', 15); ?></h1></div>
-      <a href="<?php the_field('banner_knop_link', 15); ?>" class="ctaButton"><?php the_field('banner_knop_tekst', 15); ?></a>
-    </div>
-    <img src="<?php echo get_theme_file_uri('/images/hero.png') ?>">
-    <div class="page-banner__content container t-center c-white">
-    </div>
+      <div class="opacity"></div>
+      <div class="content">
+        <div class="slogan"><h1><?php the_field('banner_slogan', 15); ?></h1></div>
+        <a href="<?php the_field('banner_knop_link', 15); ?>" class="ctaButton"><?php the_field('banner_knop_tekst', 15); ?></a>
+      </div>
+      <img src="<?php echo get_theme_file_uri('/images/hero.png') ?>">
+      <div class="page-banner__content container t-center c-white">
+      </div>
   </div>
   <div class="indexContainer">
 
