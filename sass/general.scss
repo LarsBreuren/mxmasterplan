@@ -11,6 +11,20 @@
     height: auto;
   }
 
+  .logo{
+    h1{ 
+      margin: 0;
+    }
+    a{
+      color: #fff;
+      font-size: 1.5em;
+      font-family: 'Maven Pro', sans-serif;
+      text-transform: uppercase;
+      margin: 0;
+      text-decoration: none;
+    }
+  }
+
   .ctaButton{
     background-color: #FE6C2D;
     display: inline-block;
@@ -26,6 +40,33 @@
 .ctaButton:hover{
   background-color: #000;
   cursor: pointer;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    width: 80vw;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 80vw;
+    max-width: 1400px;
+  }
+}
+
+.wideContainer{
+  width: 100%;
 }
 
  html {

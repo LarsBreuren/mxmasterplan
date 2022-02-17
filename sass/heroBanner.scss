@@ -3,28 +3,24 @@
     font-family: 'Maven Pro', sans-serif;
     font-weight: 700;
     height: 70vh;
-    
-    img{
-      max-height: 80vh;
-      width: 100%;
-    }
+    margin-bottom: 4em;
 
     h1{
-        margin-bottom: 5px;
+        margin-bottom: 10px;
+        font-size: 3em;
     }
-    .content{
-        position: absolute;
-        top: 15%;
-        left: 15%;
-      }
       .slogan{
         font-size: 1.2rem;
         color: #fff;
         text-transform: uppercase;
       }    
+
+      .content {
+        position: absolute;
+      }
       .mountain{
         position: absolute;
-        bottom: 0px;
+        bottom: -1px;
         left: 0;
       }
 
@@ -32,11 +28,13 @@
         background-size: cover;
         background-position: center;
         height: 100%;
+        max-height: 80vh;
+        width: 100%;
       }
       .opacity{
         position: absolute;
         top: 0;
-        bottom: 3px;
+        bottom: 0px;
         left: 0;
         right: 0;
         background-color: rgba(0,0,0,0.35);
@@ -45,13 +43,38 @@
 
 @media only screen and (max-width: 600px) {
   .heroBanner{
-    height: 40vh;
-
+    height: 30vh;
+    h1{
+      font-size: 1.5em;
+    }
+    .content {
+      text-align: center;
+      top: 20px;
+      left: 0;
+      right: 0;
+    }
+    .opacity{
+      background-color: rgba(0,0,0,0.5);
+    }
   }
 };
 
 @media only screen and (min-width: 600px) {
-
+  .heroBanner{
+    height: 40vh;
+    h1{
+      font-size: 2em;
+    }
+    .content {
+      text-align: center;
+      top: 20px;
+      left: 0;
+      right: 0;
+    }
+    .opacity{
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
 };
 
 @media only screen and (min-width: 768px) {
@@ -59,9 +82,30 @@
 };
 
 @media only screen and (min-width: 992px) {
-
+  .heroBanner{
+    height: 70vh;
+    .content {
+      text-align: left;
+        position: absolute;
+        top: 60px;
+        left: 0%;
+      }
+      h1{
+        font-size: 3em;
+      }
+      .mountain{
+        width: 70%;
+      }
+    .opacity{
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
 };
 
 @media only screen and (min-width: 1200px) {
-
+  .heroBanner{
+    .mountain{
+      width: 50%;
+    }
+  }
 };

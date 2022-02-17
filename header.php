@@ -13,8 +13,7 @@
     <div class="navContainer">
       <div class="content">
         <div class="logo">
-          <a href="https://localhost/kutten/"><img src="<?php echo get_template_directory_uri().'/images/logo.png'; ?>"></a>
-
+          <a href="https://localhost/kutten/"><h1>MX</h1></a>
         </div>
         <div class="mainNav">
           <?php
