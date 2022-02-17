@@ -22,11 +22,40 @@
           <span class="material-icons">  sports_score </span>
         </div>
           <p><span class="current">&euro;<?php the_field('huidig_opgehaald_bedrag', 15); ?></span> / &euro;<?php the_field('streef_bedrag', 15); ?></p>
-        
-  
-   
+    </div>
+  </main>
+</div>
 
+    <div class="news">
+      <div class="container">
+        <?php 
+          $posts = get_posts(array(
+            'posts_per_page'	=> 2,
+            'post_type'			=> 'post',
+            'category_name' => 'nieuws', 
+          ));
+          if( $posts ): ?>	
+                <?php foreach( $posts as $post ):
+                    setup_postdata( $post );
+                    $cat = get_the_category($post->ID);
+                    $mainText = get_field( "hoofdtekst" );
+                    ?>
+                      <a href="<?php echo the_permalink() ?>" class="newsItem">
+                        <div class="thumbImg" style=' 
+                          background-image: url("<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>");
+                          background-position:<?php echo get_field( "thumb_alignment" ); ?>;'>
+                          <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
+                        </div>
 
+                      <div class="content">
+                        <h2><?php the_title(); ?></h2>
+                        <p><?php echo $mainText ?></p>
+                    </div>
+                    </a>
+              <?php endforeach; ?>
+            <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
+      </div>
     </div>
   </main>
 
