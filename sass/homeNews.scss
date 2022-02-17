@@ -1,23 +1,42 @@
 .news{
     background-color: #E4E4E4;
-    padding: 7em 0;
+    padding: 75px 0;
+    h2{
+        font-size: 3em;
+        color: #000;
+        text-align: center;
+        margin: 0;
+    }
+    .ctaButton {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+      }
     .container{
         display: flex;
         justify-content: space-between;
     }
-    a{
+    .newsItem{
+        margin: 75px 0;
         text-decoration: none;
         color: #000;
         width: 40%;
         background-color: #fff;
+        padding-bottom: 75px;
+        transition: 200ms;
+        &:hover{
+            box-shadow: 0 0 60px rgba(0,0,0,.50)
+        }
         .content{
             padding: 1em 2.5em;
             position: relative;
             top: -5px;
-            h2{
+            h3{
                 font-size: 2em;
                 margin: 0;
             }
+
         }
             .thumbImg{
                 position: relative;

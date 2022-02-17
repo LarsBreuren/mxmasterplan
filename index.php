@@ -27,6 +27,7 @@
 </div>
 
     <div class="news">
+      <h2> Laatste nieuws</h2>
       <div class="container">
         <?php 
           $posts = get_posts(array(
@@ -48,7 +49,7 @@
                         </div>
 
                       <div class="content">
-                        <h2><?php the_title(); ?></h2>
+                        <h3><?php the_title(); ?></h3>
                         <p><?php echo $mainText ?></p>
                     </div>
                     </a>
@@ -56,6 +57,7 @@
             <?php wp_reset_postdata(); ?>
           <?php endif; ?>
       </div>
+      <a href="#" class="ctaButton">Bekijk al het nieuws</a>
     </div>
   </main>
 
