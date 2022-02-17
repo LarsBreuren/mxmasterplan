@@ -17,7 +17,7 @@ function style() {
 function watch() {
     browserSync.init({
         server: {
-            proxy: "localhost/mxmasterplan",
+            proxy: "http://localhost/mxmasterplan/",
             port: 80
         }
     });

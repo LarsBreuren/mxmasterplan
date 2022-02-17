@@ -5,8 +5,9 @@
         <div class="slogan"><h1><?php the_field('banner_slogan', 15); ?></h1></div>
         <a href="<?php the_field('banner_knop_link', 15); ?>" class="ctaButton"><?php the_field('banner_knop_tekst', 15); ?></a>
       </div>
-      <img src="<?php echo get_theme_file_uri('/images/hero.png') ?>">
-      <div class="page-banner__content container t-center c-white">
+      <div class="heroImage" style="background-image: url('<?php echo get_theme_file_uri('/images/hero2.jpg') ?>');"> </div>
+      <div class="mountain">
+        <img src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
       </div>
   </div>
   <div class="indexContainer">

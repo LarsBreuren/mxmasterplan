@@ -374,6 +374,11 @@ template {
   position: relative;
   font-family: "Maven Pro", sans-serif;
   font-weight: 700;
+  height: 70vh;
+}
+.heroBanner img {
+  max-height: 80vh;
+  width: 100%;
 }
 .heroBanner h1 {
   margin-bottom: 5px;
@@ -387,6 +392,30 @@ template {
   font-size: 1.2rem;
   color: #fff;
   text-transform: uppercase;
+}
+.heroBanner .mountain {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+.heroBanner .heroImage {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.heroBanner .opacity {
+  position: absolute;
+  top: 0;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+@media only screen and (max-width: 600px) {
+  .heroBanner {
+    height: 40vh;
+  }
 }
 .site-header .content {
   display: flex;
