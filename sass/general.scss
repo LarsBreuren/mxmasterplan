@@ -4,7 +4,11 @@
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
+    padding-bottom: 2em;
+    p{
+      line-height: 1.5;
+    }
   }
   img {
     max-width: 100%;
@@ -46,10 +50,12 @@
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  padding: 0 15px;
 }
 @media (min-width: 768px) {
   .container {
     width: 750px;
+    padding: 0;
   }
 }
 @media (min-width: 992px) {

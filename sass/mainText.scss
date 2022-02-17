@@ -1,0 +1,109 @@
+main{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    div{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 4em;
+    }
+    h1{
+        margin: 0;
+        color: #BEBEBE;
+        font-size: 2.5em;
+    }
+    .calculator{
+        .bar{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            progress {
+                appearance: none;
+                position: relative;
+                width: 90%;
+                height: 25px;
+                border: none;
+            }
+            .material-icons{
+                width: 10%;
+                font-size: 4em;
+            }
+        }
+          p{
+            font-size: 2em;
+            font-family: 'Maven Pro', sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #787878;
+            span{
+                color: #BEBEBE;
+            }
+          }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    main{
+        h1{
+            font-size: 1.8em;
+        }
+        .calculator{
+            .bar{
+                margin-bottom: 1em;
+                .material-icons{
+                    font-size: 3em;
+                }
+            }
+            p{
+                font-size: 1.5em;
+                }
+        }
+    }
+  };
+  
+  @media only screen and (min-width: 600px) {
+
+  };
+  
+  @media only screen and (min-width: 768px) {
+  
+  };
+  
+  @media only screen and (min-width: 992px) {
+    main{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: unset;
+        div{
+            width: 40%;
+            text-align: unset;
+        }
+        h1{
+            margin: 0;
+            color: #BEBEBE;
+            font-size: 3em;
+        }
+        .calculator{
+            .bar{
+                width: 100%;
+                align-items: center;
+                progress {
+                    width: 90%;
+                    height: 25px;
+                }
+                .material-icons{
+                    width: 10%;
+                    font-size: 4em;
+                }
+            }
+              p{
+                font-size: 2em;
+              }
+            }
+        }
+  };
+  
+  @media only screen and (min-width: 1200px) {
+
+  };
