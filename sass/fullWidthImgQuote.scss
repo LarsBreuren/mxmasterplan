@@ -1,0 +1,23 @@
+.fullWidthImgQuote{
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3{
+        color: #fff;
+        font-size: 3em;
+        text-transform: uppercase;
+        z-index: 2;
+    }
+    .opacity{
+        position: absolute;
+        top: 0;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.35);
+      }
+}

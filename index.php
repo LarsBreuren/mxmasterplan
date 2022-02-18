@@ -59,6 +59,14 @@
       </div>
       <a href="#" class="ctaButton">Bekijk al het nieuws</a>
     </div>
+    <?php 
+    $fullWidthImgQuote = get_field('quote_foto', 15); ?>
+    
+  <div class="fullWidthImgQuote" style=' 
+     background-image: url("<?php echo $fullWidthImgQuote['url'] ?>");'>
+        <h3><?php echo the_field('quote', 15); ?></h3> 
+        <div class="opacity"></div>
+    </div>
   </main>
 
   </div>
