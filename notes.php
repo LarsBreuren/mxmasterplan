@@ -10,7 +10,8 @@
 <?php 
 $posts = get_posts(array(
 	'posts_per_page'	=> -1,
-	'post_type'			=> 'post'
+	'post_type'			=> 'post',
+  'category_name' => 'nieuws', 
 ));
 $display_Interesses = um_user('Interesses');
 if( $posts ): ?>	

@@ -1,0 +1,130 @@
+.single{
+    .singleBanner{
+        position: relative;
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: 700;
+        height: 50vh;
+        margin-bottom: 6em;
+
+        h1{
+            font-size: 3em;
+            color: #fff;
+        }
+        .slogan{
+            font-size: 1.2rem;
+            color: #fff;
+            text-transform: uppercase;
+        }    
+
+        .content {
+            position: absolute;
+            text-align: center;
+            left: 0;
+            right: 0;
+            top: 50px;
+        }
+        .mountain{
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 50%;
+        }
+
+        .heroImage{
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            max-height: 80vh;
+            width: 100%;
+        }
+        .opacity{
+            position: absolute;
+            top: 0;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.35);
+        }
+    }
+    .intro{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+.single{
+    .singleBanner{
+        height: 30vh;
+        h1{
+        font-size: 1.5em;
+        }
+        .content {
+        text-align: center;
+        top: 20px;
+        left: 0;
+        right: 0;
+        }
+        .mountain{ width: 100%;}
+        .opacity{
+        background-color: rgba(0,0,0,0.5);
+        }
+    }
+  }
+};
+
+@media only screen and (min-width: 600px) {
+    .single{
+        .singleBanner{
+            height: 40vh;
+            h1{
+            font-size: 2em;
+            }
+            .content {
+            text-align: center;
+            top: 20px;
+            left: 0;
+            right: 0;
+            }
+            .opacity{
+            background-color: rgba(0,0,0,0.5);
+            }
+        }
+    }
+};
+
+@media only screen and (min-width: 768px) {
+
+};
+
+@media only screen and (min-width: 992px) {
+   .single{
+    .singleBanner{
+        height: 70vh;
+        .content {
+        text-align: left;
+            position: absolute;
+            top: 60px;
+            left: 0%;
+        }
+        h1{
+            font-size: 3em;
+        }
+        .mountain{
+            width: 70%;
+        }
+        .opacity{
+        background-color: rgba(0,0,0,0.5);
+        }
+     }
+    }
+};
+
+@media only screen and (min-width: 1200px) {
+    .single{
+        .singleBanner{
+            .mountain{
+              width: 50%;
+            }
+          }
+    }
+};
