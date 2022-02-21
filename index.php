@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php 
+ /* Template Name: Homepage */
+get_header(); ?>
     <div class="heroBanner">
       <div class="opacity"></div>
       <div class="container">
