@@ -60,7 +60,7 @@ get_header(); ?>
             <?php wp_reset_postdata(); ?>
           <?php endif; ?>
       </div>
-      <a href="#" class="ctaButton">Bekijk al het nieuws</a>
+      <a href="/nieuws" class="ctaButton">Bekijk al het nieuws</a>
     </div>
     <?php 
     $fullWidthImgQuote = get_field('quote_foto', 15); ?>
