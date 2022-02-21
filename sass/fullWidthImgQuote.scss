@@ -1,5 +1,5 @@
 .fullWidthImgQuote{
-    height: 50vh;
+    height: 30vh;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -8,9 +8,10 @@
     align-items: center;
     h3{
         color: #fff;
-        font-size: 3em;
+        font-size: 2em;
         text-transform: uppercase;
         z-index: 2;
+        text-align: center;
     }
     .opacity{
         position: absolute;
@@ -21,3 +22,24 @@
         background-color: rgba(0,0,0,0.35);
       }
 }
+
+@media only screen and (min-width: 600px) {
+    .fullWidthImgQuote{
+        height: 50vh;
+        h3{
+        font-size: 3em;
+        }
+    }
+};
+
+@media only screen and (min-width: 768px) {
+
+};
+
+@media only screen and (min-width: 992px) {
+
+};
+
+@media only screen and (min-width: 1200px) {
+
+};
