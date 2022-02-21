@@ -41,6 +41,7 @@
                         <h3><?php the_title(); ?></h3>
                         <p><?php echo $mainText ?></p>
                     </div>
+                    <div class="date"><p><?php echo get_the_date( 'd-m-y' ); ?></p></div>
                     </a>
               <?php endforeach; ?>
             <?php wp_reset_postdata(); ?>
