@@ -2,7 +2,6 @@
     position: relative;
     font-weight: 700;
     height: 70vh;
-    margin-bottom: 6em;
 
     h1{
         margin-bottom: 10px;
@@ -62,6 +61,7 @@
 @media only screen and (min-width: 600px) {
   .heroBanner{
     height: 40vh;
+    margin-bottom: 3em;
     h1{
       font-size: 2em;
     }
@@ -84,6 +84,7 @@
 @media only screen and (min-width: 992px) {
   .heroBanner{
     height: 70vh;
+    margin-bottom: 3em;
     .content {
       text-align: left;
         position: absolute;
