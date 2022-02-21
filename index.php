@@ -70,6 +70,12 @@ get_header(); ?>
         <h3><?php echo the_field('quote', 15); ?></h3> 
         <div class="opacity"></div>
     </div>
+
+    <div class="fullWidthQuote">
+      <div class="container">
+        <h3><?php echo the_field('wide_quote', 15); ?></h3>
+      </div> 
+    </div>
   </main>
 
   </div>
