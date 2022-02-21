@@ -20,6 +20,7 @@
         justify-content: space-between;
     }
     .newsItem{
+        position: relative;
         margin: 30px 0;
         text-decoration: none;
         color: #000;
@@ -48,8 +49,17 @@
             .mountain{
                 position: absolute;
                 bottom: -2px;
+            }
         }
-        }
+        .date {
+            position: absolute;
+            bottom: 0;
+            right: 1em;
+            p{
+                font-size: 0.9em;
+                color: lightgray;
+            }
+          }
     }
 }
 
