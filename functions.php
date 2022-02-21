@@ -28,4 +28,10 @@ function university_files() {
       register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
     }
     add_action( 'init', 'wpb_custom_new_menu' );
+
+    function wdm_register_mobile_menu() {
+      add_theme_support( 'nav-menus' );
+      register_nav_menus( array('mobile-menu' => __( 'Mobile Menu', 'wdm' )) );
+  }
+  add_action( 'init', 'wdm_register_mobile_menu' );
 ?>

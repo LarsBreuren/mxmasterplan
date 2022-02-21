@@ -2,15 +2,17 @@
    get_header();
     while(have_posts()){
         the_post(); ?>
-    <div class="page-banner">
-      <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg') ?>)"></div>
-      <div class="page-banner__content container container--narrow">
-        <h1 class="page-banner__title"><?php the_title(); ?></h1>
-        <div class="page-banner__intro">
-          <p>Moet nog wat gedaan worden</p>
+    <div class="heroBanner">
+      <div class="opacity"></div>
+      <div class="container">
+       <div class="content">
+        <div class="slogan"><h1><?php the_field('banner_slogan', 15); ?></h1></div>
+        <a href="<?php the_field('banner_knop_link', 15); ?>" class="ctaButton"><?php the_field('banner_knop_tekst', 15); ?></a>
         </div>
       </div>
-    </div>
+      <div class="heroImage" style="background-image: url('<?php echo get_theme_file_uri('/images/hero2.jpg') ?>');"> </div>
+      <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
+  </div>
 
     <div class="container container--narrow page-section">
 
@@ -63,4 +65,3 @@
     }
     get_footer();
     ?>
-?>
