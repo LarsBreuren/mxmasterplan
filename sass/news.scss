@@ -86,7 +86,7 @@
             .thumbImg{
                 height: 100%;
                 background-size: cover;
-                height:400px;  
+                height:300px;  
             }
             .date {
                 position: absolute;
@@ -139,7 +139,7 @@
             .thumbImg{
                 height: 100%;
                 background-size: cover;
-                height:400px;  
+                height:300px;  
             }
             .date {
                 position: absolute;
@@ -199,10 +199,29 @@
   .newsBanner{
     margin-bottom: 6em;
   }
+  .newsContainer{
+    .newsItems{
+      .newsItem{
+        .thumbImg{
+          height: 400px;
+        }  
+      }
+    }
+    .featuredItems{
+      .featuredItem{
+        .thumbImg{
+          height: 400px;
+        }
+      }
+    }
+  }
 };
 
 @media only screen and (min-width: 768px) {
   .newsContainer{
+    h2{
+      margin-left: 15px;
+    }
     .featuredItems{
       flex-direction: unset;
       margin-bottom: 30px;
