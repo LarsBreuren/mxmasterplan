@@ -18,7 +18,7 @@
       <div class="newsContainer">
       <div class="container">
         <h2 class="newsTitle">MX nieuws</h2>
-        <div class="featuredItems">
+        <div class="newsItems">
           <?php 
             $posts = get_posts(array(
               'post_type'			=> 'post',
@@ -31,7 +31,7 @@
                       $cat = get_the_category($post->ID);
                       $mainText = get_field( "hoofdtekst" );
                       ?>
-                        <a href="<?php echo the_permalink() ?>" class="featuredItem">
+                        <a href="<?php echo the_permalink() ?>" class="newsItem featuredItem">
                           <div class="thumbImg" style=' 
                             background-image: url("<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>");
                             background-position:<?php echo get_field( "thumb_alignment" ); ?>;'>
