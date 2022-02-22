@@ -15,9 +15,10 @@
   </div>
         <?php } ?>
 
-      <div class="news">
-      <h2> Laatste nieuws</h2>
+      <div class="newsContainer">
       <div class="container">
+      <h2 class="newsTitle">MX nieuws</h2>
+      <div class="featuredItems">
         <?php 
           $posts = get_posts(array(
             'posts_per_page'	=> 2,
@@ -27,27 +28,26 @@
           if( $posts ): ?>	
                 <?php foreach( $posts as $post ):
                     setup_postdata( $post );
+                    if(  get_field( "featured_article" ) == "Featured"){
                     $cat = get_the_category($post->ID);
                     $mainText = get_field( "hoofdtekst" );
                     ?>
-                      <a href="<?php echo the_permalink() ?>" class="newsItem">
+                      <a href="<?php echo the_permalink() ?>" class="featuredItem">
                         <div class="thumbImg" style=' 
                           background-image: url("<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>");
                           background-position:<?php echo get_field( "thumb_alignment" ); ?>;'>
-                          <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
                         </div>
-
+                      <div class="opacity"></div>
                       <div class="content">
                         <h3><?php the_title(); ?></h3>
-                        <p><?php echo $mainText ?></p>
                     </div>
                     <div class="date"><p><?php echo get_the_date( 'd-m-y' ); ?></p></div>
                     </a>
-              <?php endforeach; ?>
+              <?php } endforeach; ?>
             <?php wp_reset_postdata(); ?>
           <?php endif; ?>
+          </div>
       </div>
-      <a href="#" class="ctaButton">Bekijk al het nieuws</a>
     </div>
 
 
