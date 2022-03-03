@@ -23,6 +23,8 @@ main{
                 width: 90%;
                 height: 25px;
                 border: none;
+                background: #e4e4e4;
+                -webkit-progress-value { background: #e4e4e4; }
             }
             .material-icons{
                 width: 10%;
