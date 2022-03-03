@@ -1,33 +1,69 @@
 footer{
+    background-color: #7F7F7F;
+    position: relative;
     .mountain{
         position: relative;
-        bottom: -11em;
+        top: -5px;
         transform: scaleY(-1);
     }
     .footerContent{
-        background-color: #7F7F7F;
         display: flex;
         justify-content: space-around;
-        padding-top: 10em;
         div{
             width: 33.33333%;
             padding: 1em;
             text-align: center;
         }
         .links{
-            li{
-                list-style: none;
-                margin: .5em 0;
-                a{
-                    color: #fff;
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    font-weight: 800;
-                    &:hover{
-                        color: #000;
-                    }
-                } 
+            ul{
+                padding: 0;
+                li{
+                    list-style: none;
+                    margin: .5em 0;
+                    a{
+                        color: #fff;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        font-weight: 800;
+                        &:hover{
+                            color: #000;
+                        }
+                    } 
+                }
             }
         }
     }
 }
+
+  
+  @media only screen and (max-width: 600px) {
+    footer{
+        .footerContent{
+            flex-direction: column;
+            justify-content: center;
+            div{
+                width: 70%;
+                align-self: center;
+            }
+            .logo{
+                padding: 0 2em;
+            }
+        }
+    }
+  };
+  
+  @media only screen and (min-width: 600px) {
+
+  };
+  
+  @media only screen and (min-width: 768px) {
+  
+  };
+  
+  @media only screen and (min-width: 992px) {
+
+  };
+  
+  @media only screen and (min-width: 1200px) {
+
+  };
