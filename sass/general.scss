@@ -31,7 +31,7 @@ body {
     }
   }
 
-  .ctaButton{
+  .ctaButton, .smallCtaButton{
     background-color: #FE6C2D;
     display: inline-block;
     padding: 1em 2em;
@@ -42,7 +42,10 @@ body {
     transition: 300ms;
     text-decoration: none;;
 }
-.ctaButton:hover{
+.smallCtaButton{
+  padding: .7em 1em;
+}
+.ctaButton:hover, .smallCtaButton:hover{
   background-color: #000;
   cursor: pointer;
 }
@@ -91,6 +94,7 @@ body {
     margin: 0.67em 0;
     color: #bebebe;
     font-weight: 700;
+    text-transform: uppercase;
   }
   h2,h3{
     color: #bebebe;

@@ -17,6 +17,7 @@ get_header(); ?>
     <div class="text">
       <h1><?php the_field('hoofd_tekst_titel', 15); ?></h1>
       <p><?php the_field('hoofd_tekst', 15); ?></p>
+      <a  href="<?php the_field('hoofd_tekst_link', 15); ?>" class="smallCtaButton"><?php the_field('hoofd_tekst_link_tekst', 15); ?></a>
     </div>
     <div class="calculator">
         <div class="bar">
