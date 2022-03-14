@@ -1,0 +1,95 @@
+.imgWithTextSection{
+    position: relative;
+    .bar{
+        background-color: red;
+        height: 80%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .flexContainer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .text{
+            height: 80%;
+            h3{
+                margin-top: 0;
+                color: #7F7F7F;
+                text-transform: uppercase;
+                font-size: 2em;
+            }
+        }
+        .img{
+            min-height: 250px;
+            padding: 0 4em;
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+        div{
+            width: 45%;
+            text-align: center;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+    .imgWithTextSection{
+        position: relative;
+        .bar{
+            background-color: lightgrey;
+            height: 80%;
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    
+        .flexContainer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .text{
+                height: 80%;
+                h3{
+                    margin-top: 0;
+                    color: #7F7F7F;
+                    text-transform: uppercase;
+                    font-size: 2em;
+                }
+            }
+            .img{
+                img{
+                    min-height: 400px;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 20px;
+                    object-fit: cover;
+                }
+            }
+            div{
+                width: 45%;
+                text-align: center;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+
+}
