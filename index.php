@@ -85,16 +85,14 @@ get_header(); ?>
       <div class="bar"></div>
       <div class="container">
         <div class="flexContainer">
-          <div class="img">
-              <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($chosenID));?>">
-          </div>
+          <div class="img" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($chosenID));?>');"> </div>
           <div class="text">
             <h3> <?php echo get_the_title( $chosenID ); ?></h3>
             <p> <?php
                 $cutMainText = substr(get_field('hoofdtekst', $chosenID) ,0, 400);
                 echo  $cutMainText;
                 // echo the_field('hoofdtekst', $chosenID)
-                ?></p>
+                ?>...</p>
             <a  href="<?php the_field('fotomettekstlink', 15); ?>" class="smallCtaButton"><?php echo the_field('fotomettekstknoptekst', 15); ?></a> 
           </div>
         </div>
