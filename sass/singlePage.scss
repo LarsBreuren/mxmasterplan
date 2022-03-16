@@ -3,7 +3,10 @@
         position: relative;
         font-family: 'Maven Pro', sans-serif;
         font-weight: 700;
-        height: 60vh;
+        height: 30vh;
+        width: 100%;
+        padding: 0;
+        min-height: 250px;
  
         .bannerTitle {
             position: absolute;
@@ -12,7 +15,7 @@
             right: 0;
             top: 50px;
             h1{
-                font-size: 4em;
+                font-size: 2em;
                 color: #fff;
                 font-weight: 800;
             }
@@ -22,6 +25,7 @@
             bottom: -1px;
             left: 0;
             height: 100px;
+            display: none;
         }
 
         .heroImage{
@@ -53,9 +57,14 @@
             margin-top: 0;
         }
         .textBlockImage{
-            margin: 0;
-            max-width: 100%;
-            max-height: 55vh;
+            text-align: center;
+            img{
+                margin: 0;
+                max-width: 100%;
+                max-height: 55vh;
+                min-height: 250px;
+                object-fit: cover;
+            }
         }
     }
 
@@ -66,13 +75,36 @@
 };
 
 @media only screen and (min-width: 768px) {
+    .single{
 
+        .singleBanner{
+            .bannerTitle {
+                h1{
+                    font-size: 4em;
+                }
+            }
+        }
+    }
 };
 
 @media only screen and (min-width: 992px) {
+    .single{
 
+        .singleBanner{
+            height: 40vh;
+        }
+    }
 };
 
 @media only screen and (min-width: 1200px) {
+    .single .singleBanner .mountain{
+        display: unset;
+    }
+    .single{
+        .singleBanner{
+            height: 60vh;
+            width: unset;
+        }
+    }
 
 };
