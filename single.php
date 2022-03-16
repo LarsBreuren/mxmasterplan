@@ -1,15 +1,13 @@
 <?php 
    get_header(); ?>
+   <div class="container">
    <div class="single">
-    <div class="content">
         <?php while( have_posts() ): ?>
           <?php the_post(); ?>
             <div class="singleBanner">
               <div class="opacity"></div>
               <div class="container">
-              <div class="content">
-                <div class="slogan"><h1><?php echo get_the_title(); ?></h1></div>
-                </div>
+                <div class="bannerTitle"><h1><?php echo get_the_title(); ?></h1></div>
               </div>
               <div class="heroImage" style="
               background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>');
@@ -17,16 +15,39 @@
               "> </div>
               <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
          </div>
+
          <div class="container">
-            Categorie: <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?>
-            <div class="intro"><p><?php echo get_field('hoofdtekst'); ?></p></div>
+           <div class="content">
+              <?php 
+              $mainText = get_field('hoofdtekst');
+              $textBlock1 = get_field('alinea1');
+              $blockImage = get_field('fotoblok');
+              $textBlock2 = get_field('alinea2');
+              ?>
+              <div class="contentBlock">
+                <?php if( !empty( $mainText ) ): ?>
+                  <div class="textBlock firstText"><p>
+                  <p><b> Categorie: <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></b></p>
+                  <?php echo $mainText  ?></p></div>
+                <?php endif; ?>
+
+                <?php if( !empty( $textBlock1 ) ): ?>
+                <div class="textBlock"><p><?php echo $textBlock1 ?></p></div>
+                <?php endif; ?>
+              </div>
+              <?php if( !empty( $blockImage ) ): ?>
+              <img class="textBlock textBlockImage" src="<?php echo esc_url($blockImage['url']); ?>" alt="<?php echo esc_attr($blockImage['alt']);  ?>" />
+              <?php endif; ?>
+              <div class="contentBlock">
+              <?php if( !empty( $textBlock2 ) ): ?>
+                <div class="textBlock"><p><?php echo $textBlock2 ?></p></div>
+              </div>
+
+              <?php endif; ?>          
           <?php endwhile; ?>
+        </div>
       </div>
     </div>
+  </div>
 
-<?php
-    get_footer();
-?>
-
-</div>
 <?php get_footer(); ?>
