@@ -85,7 +85,10 @@ get_header(); ?>
       <div class="bar"></div>
       <div class="container">
         <div class="flexContainer">
-          <div class="img" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($chosenID));?>');"> </div>
+          <div class="img" 
+            style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id($chosenID));?>');
+            background-position:<?php echo get_field( 'thumb_alignment', $chosenID ); ?>"> 
+          </div>
           <div class="text">
             <h3> <?php echo get_the_title( $chosenID ); ?></h3>
             <p> <?php
@@ -100,3 +103,4 @@ get_header(); ?>
     </div>
   <?php  get_footer();
 ?>
+
