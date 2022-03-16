@@ -1,7 +1,7 @@
 footer{
     background-color: #7F7F7F;
     position: relative;
-    margin-top: 5em;
+    margin-top: 10em;
     .container{
         padding: 5em 0;
     }
@@ -81,6 +81,7 @@ footer{
   
   @media only screen and (min-width: 992px) {
     footer{
+        margin-top: 20em;
         .container{
             padding: 5em 0;
         }
