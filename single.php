@@ -17,10 +17,10 @@
 
         <div class="content container">
           <?php 
-          $mainText = get_field('hoofdtekst');
-          $textBlock1 = get_field('alinea1');
-          $blockImage = get_field('fotoblok');
-          $textBlock2 = get_field('alinea2');
+            $mainText = get_field('hoofdtekst');
+            $textBlock1 = get_field('alinea1');
+            $blockImage = get_field('fotoblok');
+            $textBlock2 = get_field('alinea2');
           ?>
           <div class="contentBlock">
             <?php if( !empty( $mainText ) ): ?>
@@ -48,4 +48,4 @@
     </div>
   </div>
 
-<?php get_footer(); ?>
+<?php get_footer(); ?> 

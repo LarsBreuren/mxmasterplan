@@ -22,7 +22,7 @@ get_header(); ?>
     <div class="calculator">
         <div class="bar">
           <progress max="<?php the_field('streef_bedrag', 15); ?>" value="<?php the_field('huidig_opgehaald_bedrag', 15); ?>"> 70% </progress>
-          <span class="material-icons">  sports_score </span>
+          <img src="<?php echo get_theme_file_uri('/images/icons/flag-checkered.svg') ?>" alt="finish vlag icoon" class="flagIcon" />
         </div>
           <p><span class="current">&euro;<?php the_field('huidig_opgehaald_bedrag', 15); ?></span> / &euro;<?php the_field('streef_bedrag', 15); ?></p>
     </div>

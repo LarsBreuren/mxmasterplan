@@ -1,5 +1,5 @@
 <footer>
-    <div class="mountainContainer"><div class="mountain" style="background-image: url('<?php echo get_theme_file_uri('/images/mountain.svg') ?>');"> </div></div>
+    <div class="mountainContainer"><div class="ductape"></div><div class="mountain" style="background-image: url('<?php echo get_theme_file_uri('/images/mountain.svg') ?>');"> </div></div>
     <div class="container">
         <div class="footerContent">
             <div><img class="logo" src="<?php echo get_theme_file_uri('/images/logo-white.svg') ?>"></div>
@@ -12,9 +12,9 @@
                 </ul> 
             </div>
             <div class="socials">
-                <P> Enige links naar socials</P>
-                <p><span class="material-icons">instagram</span></p>
-               <p><span class="material-icons">sports_score </span></p> 
+               <img src="<?php echo get_theme_file_uri('/images/icons/instagram.svg') ?>" alt="Bekijk onze instagram" title="Bekijk onze instagram" />
+               <img src="<?php echo get_theme_file_uri('/images/icons/facebook.svg') ?>" alt="An example icon" title="Bekijk onze facebook"/>
+               <img src="<?php echo get_theme_file_uri('/images/icons/twitter.svg') ?>" alt="An example icon" title="Bekijk onze twitter" />
             </div>
         </div>
     </div>
