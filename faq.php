@@ -13,8 +13,23 @@ get_header(); ?>
 </div>
 
     <div class="container faq">
-     <h1> Heyaaa veel vragenn</h1>
-    </div>
-    
+     <h1> Veelgestelde vragen</h1>
+         <?php
+         $questions = get_field_objects( 148 );
+         $counter = 1;
+            if( $questions ): ?>
+
+                <?php foreach( $questions as $question ): ?> 
+                    <?php if (str_contains($question['label'], 'Vraag')) { 
+                        ?> <div id="question<?php echo $counter ?>" class="question"><p><?php echo $question['value']; ?></p><img src="<?php echo get_theme_file_uri('/images/icons/chevron-up.svg') ?>"></div>  <?php }
+                    else{ ?>
+                        <div id="answer<?php echo $counter ?>"class="answer"><p><?php echo $question['value']; ?></p></div>   
+                <?php   $counter++; }
+                 endforeach; ?>
+
+            <?php endif; ?>
+                </div>
+            </div>
+
 <?php  get_footer();?>
 
