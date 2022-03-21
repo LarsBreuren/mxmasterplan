@@ -29,7 +29,7 @@ get_header(); ?>
                             <div id="<?php echo $counter ?>" class="questionContainer">
                                     <div class="question"><p><?php echo $question?></p> </div>
                                    <div class="chevron"><img src="<?php echo get_theme_file_uri('/images/icons/chevron-up.svg') ?>"></div> 
-                                    <div class="answer"><p><?php echo $answer ?> </p></div>
+                                 <div class="answer"><p><?php echo $answer ?> </p></div>
                             </div>
                         <?php  endwhile; ?>
                     <?php endif; ?>
