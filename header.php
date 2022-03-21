@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
   <header class="site-header">
     <div class="navContainer">
       <div class="content">
