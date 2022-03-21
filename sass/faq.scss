@@ -1,20 +1,29 @@
 
 .faq{
     h1{
-        font-size: 3em;
+        font-size: 2em;
     }
     .active{
-        .question{
-            p{
-                color: #FE6C2D;
+            .question{
+                p{
+                    color: #FE6C2D;
+                }
             }
-        }
-        .answer{
-            height: 100%;
-            p{
-                display: unset;
+            .answer{
+                height: 100%;
+                p{
+                    opacity: 1;
+                }
             }
-        }
+            .chevron{
+                img{
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+                }
+            }
     }
     .questionContainer{
         display: flex;
@@ -25,16 +34,22 @@
         border-bottom: 1px solid lightgrey;
         transition: 300ms;
         margin-bottom: 40px;
-        img{
-            width: 30px;
-            height: 30px;
+        align-items: center;
+        .chevron{   
+            text-align: right;
+            width: 10%;
+                img{
+                transition: 300ms;
+                height: 50px;
+                }
         }
         .question{
             color: #000;
-            font-size: 2em;
+            font-size: 1em;
             text-transform: uppercase;
             font-weight: 800;
             margin: 0;
+            width: 90%;
             p{
                 margin: 0;
             }
@@ -43,24 +58,43 @@
         }
     }
     .answer{
-        width: 100%;
+        width: 90%;
+        max-width: 900px;
         height: 0;
         p{
-           display: none;
+            transition: 300ms;
+            opacity: 0;
+            z-index: -5;
+            position: relative;
         }
     }
 }
 
 
 
-@media only screen and (max-width: 600px) {
-
+@media only screen and (min-width: 600px) {
+    .faq{
+        h1{
+            font-size: 3em;
+        }
+        .questionContainer{
+            .question{
+                font-size: 1.5em;
+            }
+        }
+    }
 }
 @media (min-width: 768px) {
 
 }
 @media (min-width: 992px) {
-
+    .faq{
+        .questionContainer{
+            .question{
+                font-size: 2em;
+            }
+        }
+    }
 }
 @media (min-width: 1200px) {
 
