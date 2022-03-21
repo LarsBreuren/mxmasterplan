@@ -14,22 +14,30 @@ get_header(); ?>
 
     <div class="container faq">
      <h1> Veelgestelde vragen</h1>
-         <?php
-         $questions = get_field_objects( 148 );
-         $counter = 1;
-            if( $questions ): ?>
+     <?php
+        $fields = get_field_objects( 148 );
+        $counter = 1;
+        if( $fields ): ?>
 
-                <?php foreach( $questions as $question ): ?> 
-                    <?php if (str_contains($question['label'], 'Vraag')) { 
-                        ?> <div id="<?php echo $counter ?>" class="question"><p><?php echo $question['value']; ?></p><img src="<?php echo get_theme_file_uri('/images/icons/chevron-up.svg') ?>"></div>  <?php }
-                    else{ ?>
-                        <div id="answer<?php echo $counter ?>"class="answer"><p><?php echo $question['value']; ?></p></div>   
-                <?php   $counter++; }
-                 endforeach; ?>
-
-            <?php endif; ?>
-                </div>
-            </div>
-
+                <?php foreach( $fields as $field ): ?>
+                    <?php if( have_rows($field['label']) ): ?>
+                        <?php while( have_rows($field['label']) ): the_row(); 
+                            // Get sub field values.
+                            $question= get_sub_field('vraag');
+                            $answer = get_sub_field('antwoord');
+                            ?>
+                            <div id="<?php echo $counter ?>" class="questionContainer">
+                                    <div class="question"><p><?php echo $question?></p> </div>
+                                    <img src="<?php echo get_theme_file_uri('/images/icons/chevron-up.svg') ?>">
+                                    <div class="answer"><p><?php echo $answer ?> </p></div>
+                            </div>
+                        <?php  endwhile; ?>
+                    <?php endif; ?>
+                <?php $counter++; endforeach; ?>
+        <?php endif; ?>
+    </div>
+    
 <?php  get_footer();?>
+
+
 

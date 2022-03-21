@@ -1,8 +1,13 @@
-console.log('JS is geladen!!');
-
 document.addEventListener('DOMContentLoaded', () => {  
 
-document.getElementById('1').onclick = function() {
-    this.classList.toggle('active');
-}
+    const elements = document.getElementsByClassName("questionContainer");
+
+    const myFunction = function() {
+        this.classList.toggle('active');
+    };
+    
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('click', myFunction, false);
+    }
 });
+
