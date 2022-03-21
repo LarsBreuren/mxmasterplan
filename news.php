@@ -19,9 +19,11 @@
       <div class="container">
         <h2 class="newsTitle">MX nieuws</h2>
         <div class="newsItems">
+          
           <?php 
             $posts = get_posts(array(
               'post_type'			=> 'post',
+              'posts_per_page'=> -1,
               'category_name' => 'nieuws', 
             ));
             if( $posts ): ?>	
@@ -46,10 +48,12 @@
               <?php wp_reset_postdata(); ?>
             <?php endif; ?>
             </div>
+
             <div class="newsItems"> 
             <?php 
             $posts = get_posts(array(
               'post_type'			=> 'post',
+              'posts_per_page'=> -1,
               'category_name' => 'nieuws', 
             ));
             if( $posts ): ?>	

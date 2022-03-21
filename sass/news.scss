@@ -71,7 +71,7 @@
   }
   .newsItems{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 
     .featuredItem{
       .content{
@@ -82,7 +82,7 @@
     }
 
     .content{
-      padding: 1em 2.5em;
+      padding: 1em 1.7em;
       position: absolute;
       bottom: 0;
       z-index: 5;
@@ -179,6 +179,15 @@
 @media only screen and (min-width: 768px) {
 };
 
-@media only screen and (min-width: 992px) {
-
+@media only screen and (min-width: 1200px) {
+  .newsContainer{
+    .newsItems{
+      .newsItem{
+        width: calc(33.3333% - 30px);
+      }
+      .featuredItem{
+        width: calc(50% - 30px);
+      }
+    }
+  }
 };
