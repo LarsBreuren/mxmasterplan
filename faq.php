@@ -21,7 +21,7 @@ get_header(); ?>
 
                 <?php foreach( $questions as $question ): ?> 
                     <?php if (str_contains($question['label'], 'Vraag')) { 
-                        ?> <div id="question<?php echo $counter ?>" class="question"><p><?php echo $question['value']; ?></p><img src="<?php echo get_theme_file_uri('/images/icons/chevron-up.svg') ?>"></div>  <?php }
+                        ?> <div id="<?php echo $counter ?>" class="question"><p><?php echo $question['value']; ?></p><img src="<?php echo get_theme_file_uri('/images/icons/chevron-up.svg') ?>"></div>  <?php }
                     else{ ?>
                         <div id="answer<?php echo $counter ?>"class="answer"><p><?php echo $question['value']; ?></p></div>   
                 <?php   $counter++; }

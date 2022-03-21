@@ -28,4 +28,12 @@ function university_files() {
       register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
     }
     add_action( 'init', 'wpb_custom_new_menu' );
+
+
+       function my_scripts() {
+        if( is_page( array( 'FAQ' ) ) ){
+          wp_enqueue_script('my-script', get_template_directory_uri() .'/js/faq.js');	
+        }
+    }
+    add_action( 'wp_enqueue_scripts', 'my_scripts' );
 ?>
