@@ -26,10 +26,11 @@
               'posts_per_page'=> -1,
               'category_name' => 'nieuws', 
             ));
+            $highlightCounter = 0;
             if( $posts ): ?>	
                   <?php foreach( $posts as $post ):
                       setup_postdata( $post );
-                      if(  get_field( "featured_article" ) == "Featured"){
+                      if(  get_field( "featured_article" ) == "Featured" && $highlightCounter < 2) {
                       $cat = get_the_category($post->ID);
                       $mainText = get_field( "hoofdtekst" );
                       ?>
@@ -44,7 +45,7 @@
                           <div class="date"><p><?php echo get_the_date( 'd-m-y' ); ?></p></div>
                       </div>
                       </a>
-                <?php } endforeach; ?>
+                <?php $highlightCounter++; } endforeach; ?>
               <?php wp_reset_postdata(); ?>
             <?php endif; ?>
             </div>
