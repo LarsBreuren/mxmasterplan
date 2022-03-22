@@ -56,6 +56,11 @@ body {
   position: relative;
   padding: 0 15px;
 }
+
+progress::-moz-progress-bar { background: #5AAC52; }
+progress::-webkit-progress-value { background: #5AAC52; }
+progress { color: #5AAC52; }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
