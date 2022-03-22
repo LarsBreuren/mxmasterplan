@@ -3,7 +3,7 @@
    get_header();
     while(have_posts()){
         the_post(); ?>
-    <div class="newsBanner">
+    <div class="secondaryBanner newsBanner">
       <div class="opacity"></div>
       <div class="container">
        <div class="content">
@@ -41,8 +41,8 @@
                         <div class="opacity"></div>
                         <div class="content">
                           <h3><?php the_title(); ?></h3>
+                          <div class="date"><p><?php echo get_the_date( 'd-m-y' ); ?></p></div>
                       </div>
-                      <div class="date"><p><?php echo get_the_date( 'd-m-y' ); ?></p></div>
                       </a>
                 <?php } endforeach; ?>
               <?php wp_reset_postdata(); ?>
@@ -71,8 +71,8 @@
                         <div class="opacity"></div>
                         <div class="content">
                           <h3><?php the_title(); ?></h3>
+                          <div class="date"><p><?php echo get_the_date( 'd-m-y' ); ?></p></div>
                       </div>
-                      <div class="date"><p><?php echo get_the_date( 'd-m-y' ); ?></p></div>
                       </a>
                 <?php } endforeach; ?>
               <?php wp_reset_postdata(); ?>

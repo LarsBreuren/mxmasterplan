@@ -15,9 +15,10 @@
             right: 0;
             top: 50px;
             h1{
-                font-size: 2em;
+                font-size: 1.7em;
                 color: #fff;
                 font-weight: 800;
+                padding: 0 1em;
             }
         }
         .mountain{
@@ -80,7 +81,7 @@
         .singleBanner{
             .bannerTitle {
                 h1{
-                    font-size: 4em;
+                    font-size: 2.5em;
                 }
             }
         }
@@ -104,6 +105,12 @@
         .singleBanner{
             height: 60vh;
             width: unset;
+            .bannerTitle {
+                h1{
+                    font-size: 4em;
+                    padding: 0 2em;
+                }
+            }
         }
     }
 
