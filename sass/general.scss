@@ -2,6 +2,9 @@ html{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.calculator, .socials {
+  display: none;
+}
 body {
     color: #333;
     font-family: "Roboto", sans-serif;

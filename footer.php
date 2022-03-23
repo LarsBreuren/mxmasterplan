@@ -5,10 +5,11 @@
             <div><img class="logo" src="<?php echo get_theme_file_uri('/images/logo-white.svg') ?>"></div>
             <div class="links">
                 <ul>
-                    <li><a href="default.asp">Home</a></li>
-                    <li><a href="news.asp">News</a></li>
-                    <li><a href="contact.asp">Contact</a></li>
-                    <li><a href="about.asp">About</a></li>
+                    <li><a href="/default">Home</a></li>
+                    <li><a href="/het-masterplan">Het masterplan</a></li>
+                    <li><a href="/nieuws">Nieuws</a></li>
+                    <li><a href="/FAQ">FAQ</a></li>
+
                 </ul> 
             </div>
             <div class="socials">

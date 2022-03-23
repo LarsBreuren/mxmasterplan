@@ -12,7 +12,7 @@
     <div class="navContainer">
       <div class="content">
         <div class="logo">
-          <a href="http://localhost/mxmasterplan/"><h1>MX</h1></a>
+          <a href="https://mx-masterplan.com/"><h1>MX</h1></a>
         </div>
         <div class="mainNav">
           <?php
