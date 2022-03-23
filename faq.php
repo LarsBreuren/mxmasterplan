@@ -15,7 +15,7 @@ get_header(); ?>
 <div class="container faq">
     <h1> Veelgestelde vragen</h1>
     <?php
-    $fields = get_field_objects( 148 );
+    $fields = get_field_objects( 184 );
     $counter = 1;
     if( $fields ): ?>
             <?php foreach( $fields as $field ): ?>

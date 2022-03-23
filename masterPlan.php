@@ -22,7 +22,7 @@
             $posts = get_posts(array(
               'post_type'			=> 'post',
               'posts_per_page'=> -1,
-              'category_name' => 'masterplan', 
+              'category_name' => 'het-masterplan', 
             ));
             if( $posts ): ?>	
                   <?php foreach( $posts as $post ):

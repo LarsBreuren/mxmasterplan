@@ -25,6 +25,7 @@
           <div class="contentBlock">
             <?php if( !empty( $mainText ) ): ?>
               <div class="textBlock firstText"><p>
+              <div class="overview"><a class="ctaButton" href="/<?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?>">Overzicht</a></div>
               <p><b> Categorie: <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></b></p>
               <?php echo $mainText  ?></p></div>
             <?php endif; ?>
