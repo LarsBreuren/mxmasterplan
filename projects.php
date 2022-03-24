@@ -17,8 +17,8 @@
 
  <div class="container projects">
     <div class="content">
-        <h1> <?php the_field('titel', 224); ?></h1>
-        <p><?php the_field('hoofdtekst', 224); ?> </p>
+        <h1> <?php the_field('titel', 330); ?></h1>
+        <p><?php the_field('hoofdtekst', 330); ?> </p>
     </div>
  </div>
 <?php get_footer(); ?>

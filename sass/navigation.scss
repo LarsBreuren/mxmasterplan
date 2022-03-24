@@ -1,6 +1,7 @@
 .site-header .content{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .site-header .mainNav a{
     color: #fff;
@@ -8,9 +9,16 @@
     font-size: 20px;
     text-transform: uppercase;
   }
-  
+  .logo{
+    div{
+      height: 45px;
+      img{
+        height: 100%;
+      }
+    }
+  }
   .site-header .mainNav a:hover{
-    color: #FEDB02;
+    color: #00999D;
   }
   .site-header .mainNav li{
     display: inline-table;
