@@ -25,9 +25,7 @@
           <div class="contentBlock">
             <?php if( !empty( $mainText ) ): ?>
               <div class="textBlock firstText"><p>
-              <div class="overview"><a class="ctaButton" href="/<?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?>">Overzicht</a></div>
-              <p><b> Categorie: <?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></b></p>
-              <?php echo $mainText  ?></p></div>
+               <?php echo $mainText  ?></p></div>
             <?php endif; ?>
 
             <?php if( !empty( $textBlock1 ) ): ?>
@@ -43,7 +41,8 @@
             <div class="contentBlock">
               <div class="textBlock"><p><?php echo $textBlock2 ?></p></div>
             </div>
-          <?php endif; ?>  
+            <?php endif; ?>  
+          <div class="overview"><a class="ctaButton" href="/<?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?>">Overzicht</a></div> 
 
       <?php endwhile; ?>
     </div>
