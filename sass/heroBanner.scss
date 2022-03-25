@@ -2,6 +2,7 @@
     position: relative;
     font-weight: 700;
     height: 70vh;
+    min-height: 300px;
 
     h1{
         margin-bottom: 10px;
@@ -25,9 +26,8 @@
 
       .heroImage{
         background-size: cover;
-        background-position: center;
+        background-position: top;
         height: 100%;
-        max-height: 80vh;
         width: 100%;
       }
       .opacity{
@@ -43,6 +43,10 @@
 @media only screen and (max-width: 600px) {
   .heroBanner{
     height: 40vh;
+    .ctaButton{
+      padding: .7em 1em;
+    }
+
     h1{
       font-size: 1.5em;
     }
@@ -83,7 +87,7 @@
 
 @media only screen and (min-width: 992px) {
   .heroBanner{
-    height: 70vh;
+    height: 80vh;
     margin-bottom: 3em;
     .content {
       text-align: left;

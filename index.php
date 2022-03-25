@@ -9,7 +9,7 @@ get_header(); ?>
         <a href="<?php the_field('banner_knop_link', 15); ?>" class="ctaButton"><?php the_field('banner_knop_tekst', 15); ?></a>
         </div>
       </div>
-      <div class="heroImage" style="background-image: url('<?php echo get_theme_file_uri('/images/hero2.jpg') ?>');"> </div>
+      <div class="heroImage" style="background-image: url('<?php echo get_theme_file_uri('/images/hero3.jpg') ?>');"> </div>
       <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
   </div>
   <div class="container">
