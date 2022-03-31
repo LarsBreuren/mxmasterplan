@@ -1,0 +1,114 @@
+.intro{
+    max-width: 700px;
+    margin-bottom: 4em;
+}
+    .expertsContainer{
+        .expert{
+            .info{
+                padding: 0 1em 1em 1em;
+                h2{
+                    color: #00999D;
+                    margin: 0;
+                }
+                .quote{
+                    font-style: italic;
+                }
+                .function{
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    p{
+                        margin-top: 2px;
+                    }
+                }
+            }
+            .profileImage{
+
+                img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }    
+@media only screen and (max-width: 600px) {
+    .intro{
+         text-align: center; 
+         margin-bottom: 2em;}
+    .about{
+        h1{
+            text-align: center;
+            margin-bottom: 0;
+        }
+    }   
+    .expertsContainer{
+        .expert{
+            width: 100%;
+            display: flex;
+            margin-bottom: 3em;
+            flex-wrap: wrap;
+            text-align: center;
+            .info{
+                width: 100%;
+                padding-top: 1em;
+            }
+            .profileImage{
+                max-height: 275px;
+                max-width: 60%;
+                margin: 0 auto;
+                img{
+                    height: 100%;
+                }
+    
+            }
+        }
+    }    
+}
+
+@media (min-width: 600px) {
+    .expertsContainer{
+        .expert:nth-child(even){
+            flex-direction: row-reverse;
+            .info{
+                text-align: right;
+            }
+        }
+        .expert{
+            width: 100%;
+            display: flex;
+            margin-bottom: 4em;
+            .info{
+                width: 50%;
+            }
+            .profileImage{
+                max-height: 275px;
+                max-width: 30%;
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .intro{ padding: 0 5em;}
+    .expertsContainer{
+        padding: 0 5em;
+        .expert{
+            margin-bottom: 8em;
+            .info{
+                width: 50%;
+            }
+            .profileImage{
+                max-height: 300px;
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
