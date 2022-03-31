@@ -31,7 +31,7 @@ get_header(); ?>
                             ?>
                                 <div class="expert">
                                      <?php if( !empty( $profileImage ) ): ?>
-                                        <div class="profileImage"> <img src="<?php echo esc_url($profileImage['url']); ?>" alt="<?php echo esc_attr($profileImage['alt']);  ?>" /></div>
+                                         <img class="profileImage" src="<?php echo esc_url($profileImage['url']); ?>" alt="<?php echo esc_attr($profileImage['alt']);  ?>" />
                                     <?php endif; ?>
                                     <div class="info">
                                         <?php if( !empty( $function ) ): ?>
@@ -53,6 +53,7 @@ get_header(); ?>
                 <?php endforeach; ?>
         <?php endif; ?>
     </div>
+    <div class="intro"><?php echo get_field('werkzaamheden', 409 ); ?></div>  
 </div>
     
 <?php  get_footer();?>
