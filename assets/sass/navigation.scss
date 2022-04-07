@@ -35,6 +35,11 @@ body{
         display: inline-table;
         padding: 0 20px;
       }
+      .current_page_item{
+        a{
+          color: #00999d;
+        }
+      }
     } 
     .logo{
       div{
@@ -104,10 +109,16 @@ body{
         padding: 1em 0 0 1em;
         width: 80%;
         margin: 0 auto;
+        .current_page_item{
+          a{
+            color: #00999d;
+          }
+        }
         li{
           list-style: none;
           text-transform: uppercase;
           margin: 20px 0;
+          
           a{
             font-family: Maven Pro;
             font-size: 20px;
