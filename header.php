@@ -13,7 +13,7 @@
       <div class="content">
         <div class="logo">
           <a href="https://mx-masterplan.com/">           
-             <div><img class="logo" src="<?php echo get_theme_file_uri('/images/logo-blue.svg') ?>"></div></a>
+             <div><img class="logo" src="<?php echo get_theme_file_uri('/assets/images/logo-blue.svg') ?>"></div></a>
         </div>
         <div class="mainNav">
           <?php

@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="heroImage" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"> </div>
-        <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
+        <img class="mountain" src="<?php echo get_theme_file_uri('/assets/images/mountain.svg') ?>">
     </div>
  <?php } ?>
 

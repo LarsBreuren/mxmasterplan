@@ -32,7 +32,7 @@ function university_files() {
 
        function my_scripts() {
         if( is_page( array( 'FAQ' ) ) ){
-          wp_enqueue_script('my-script', get_template_directory_uri() .'/js/faq.js');	
+          wp_enqueue_script('my-script', get_template_directory_uri() .'/assets/js/faq.js');	
         }
     }
     add_action( 'wp_enqueue_scripts', 'my_scripts' );

@@ -9,8 +9,8 @@ get_header(); ?>
         <a href="<?php the_field('banner_knop_link', 15); ?>" class="ctaButton"><?php the_field('banner_knop_tekst', 15); ?></a>
         </div>
       </div>
-      <div class="heroImage" style="background-image: url('<?php echo get_theme_file_uri('/images/hero3.jpg') ?>');"> </div>
-      <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
+      <div class="heroImage" style="background-image: url('<?php echo get_theme_file_uri('/assets/images/hero3.jpg') ?>');"> </div>
+      <img class="mountain" src="<?php echo get_theme_file_uri('/assets/images/mountain.svg') ?>">
   </div>
   <div class="container">
   <main>
@@ -22,7 +22,7 @@ get_header(); ?>
     <div class="calculator">
         <div class="bar">
           <progress max="<?php the_field('streef_bedrag', 15); ?>" value="<?php the_field('huidig_opgehaald_bedrag', 15); ?>"> 70% </progress>
-          <img src="<?php echo get_theme_file_uri('/images/icons/flag-checkered.svg') ?>" alt="finish vlag icoon" class="flagIcon" />
+          <img src="<?php echo get_theme_file_uri('/assets/images/icons/flag-checkered.svg') ?>" alt="finish vlag icoon" class="flagIcon" />
         </div>
           <p><span class="current">&euro;<?php the_field('huidig_opgehaald_bedrag', 15); ?></span> / &euro;<?php the_field('streef_bedrag', 15); ?></p>
     </div>
@@ -47,7 +47,7 @@ get_header(); ?>
                     <div class="thumbImg" style=' 
                       background-image: url("<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>");
                       background-position:<?php echo get_field( "thumb_alignment" ); ?>;'>
-                      <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
+                      <img class="mountain" src="<?php echo get_theme_file_uri('/assets/images/mountain.svg') ?>">
                     </div>
 
                   <div class="content">

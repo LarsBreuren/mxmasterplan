@@ -12,7 +12,7 @@
               background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ?>');
               background-position:<?php echo get_field( "thumb_alignment" ); ?>;">
                </div>
-              <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
+              <img class="mountain" src="<?php echo get_theme_file_uri('/assets/images/mountain.svg') ?>">
          </div>
 
         <div class="content container">

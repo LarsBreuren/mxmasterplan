@@ -7,7 +7,7 @@ const concat = require('gulp-concat');
 
 function style() {
 
-    return gulp.src("./sass/*.scss") 
+    return gulp.src("./assets/sass/*.scss") 
 
     .pipe(sass().on('error',sass.logError))
     .pipe(concat('styles.css'))
@@ -23,7 +23,7 @@ function watch() {
             port: 80
         }
     });
-    gulp.watch('./sass/*.scss', style);
+    gulp.watch('./assets/sass/*.scss', style);
 }
 
 exports.style = style;

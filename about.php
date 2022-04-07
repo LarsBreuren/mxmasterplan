@@ -9,13 +9,14 @@ get_header(); ?>
         </div>
     </div>
     <div class="heroImage" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"> </div>
-    <img class="mountain" src="<?php echo get_theme_file_uri('/images/mountain.svg') ?>">
+    <img class="mountain" src="<?php echo get_theme_file_uri('/assets/images/mountain.svg') ?>">
 </div>
 
 <div class="container about">
-<div class="intro">
-    <h1> <?php echo get_field('header', 409 ); ?></h1>
-     <?php echo get_field('intro', 409 ); ?></div>
+    <div class="intro">
+        <h1> <?php echo get_field('header', 409 ); ?></h1>
+        <?php echo get_field('intro', 409 ); ?>
+    </div>
     <div class="expertsContainer">
         <?php
         $fields = get_field_objects( 409 );
