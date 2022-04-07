@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const open = document.getElementById("openNav");
     const close = document.getElementById("closeNav");
+    const overlay = document.getElementById("overlay");
     const mobileContent = document.getElementById("mobileContent");
 
     open.addEventListener('click', toggleNav, false);
@@ -9,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function toggleNav(){
         mobileContent.classList.toggle('active');
+        overlay.classList.toggle('active');
     };
 });
+
+
 

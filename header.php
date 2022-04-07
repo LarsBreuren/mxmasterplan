@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<div id="overlay" class="navOverlay"></div>
   <header class="site-header">
     <div class="navContainer">
       <div class="content">
@@ -32,7 +33,6 @@
                   'menu' => 'mobile-menu',
                   'container_class' => 'custom-menu-class' ) ); 
               ?>
-              <div class="overlay"></div>
             </div>
         </div>
       </div>

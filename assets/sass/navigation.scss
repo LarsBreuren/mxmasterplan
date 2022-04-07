@@ -1,7 +1,20 @@
+body{
+  padding-top: 50px;
+}
 .site-header{
   background-color: #000;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
   .navContainer{
-    padding: 5px 30px;
+    width: 100%;
+    padding: 0 15px;
   }
   .content{
     display: flex;
@@ -25,7 +38,7 @@
     } 
     .logo{
       div{
-        height: 45px;
+        height: 35px;
         img{
           height: 100%;
         }
@@ -33,43 +46,71 @@
     }
   }
 } 
+.navOverlay{
+  transform: translateX(-100%);
+  width: 55vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.5);
+  transition: transform .3s;
+  will-change: transform;
+}
+.active{
+  transform: unset;
+}
   .mainNav{
     display: none;
   }
 
   // Mobile NAV
   .mobileNav{
+    height: 40px;
     .openNav{
         filter: brightness(0) invert(1);
         height: 40px;
         width: 40px;
     }
     .mobileContent{
-      display: none;
-      width: 50vw;
+      width: 45vw;
       background-color: #fff;
       position: fixed;
       right: 0;
       top: 0;
       z-index: 999;
-      padding: 1em 0;
       height: 100vh;
+      transform: translateX(100%);
+      transition: transform .3s;
+      will-change: transform;
       .closeNav{
+        width: 100%;
         text-align: right;
-        padding: 0 2em;
+
+        display: flex;
+        justify-content: end;
+        height: 50px;
+        align-items: center;
         img{
           width: 40px;
           height: 40px;
+          padding-right: 15px;
         }
       }
   
       ul{
         padding: 1em 0 0 1em;
+        width: 80%;
+        margin: 0 auto;
         li{
           list-style: none;
           text-transform: uppercase;
           margin: 20px 0;
           a{
+            font-family: Maven Pro;
+            font-size: 20px;
             color: #000;
             text-decoration: none;
             &:hover{
@@ -80,27 +121,43 @@
       }
     }
     .active{
-      display: block;
+      transform: unset;
     }
   }
 
-  // .overlay{
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   z-index: 100;
-  //   background-color: rgba(0,0,0,0.5);
-  // }
 
-
+  @media only screen and (max-width: 400px) {
+    .mobileNav .mobileContent ul li a{
+      font-size: 15px;
+    }
+    .mobileNav .mobileContent ul{
+      width: 100%;
+    }
+    .mobileNav .mobileContent{
+      width: 55vw;
+    }
+    .navOverlay{
+      width: 45vw;
+    }
+  }
 
   @media (min-width: 1000px) {
+    .site-header{
+      padding: 5px 0;
+    }
     .mobileNav{
       display: none;
     }
     .mainNav{
       display: unset;
     }
+
+    .navOverlay{
+      display: none;
+    }
+    .site-header .content .logo div{
+      height: 45px;
+    }
   }
+
+  
