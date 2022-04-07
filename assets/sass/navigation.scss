@@ -1,33 +1,106 @@
-.site-header .content{
+.site-header{
+  background-color: #000;
+  .navContainer{
+    padding: 5px 30px;
+  }
+  .content{
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .site-header .mainNav a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    text-transform: uppercase;
-  }
-  .logo{
-    div{
-      height: 45px;
-      img{
-        height: 100%;
+
+    .mainNav{
+      a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        &:hover{
+          color: #00999D;
+        }
+      }
+      li{
+        display: inline-table;
+        padding: 0 20px;
+      }
+    } 
+    .logo{
+      div{
+        height: 45px;
+        img{
+          height: 100%;
+        }
       }
     }
   }
-  .site-header .mainNav a:hover{
-    color: #00999D;
+} 
+  .mainNav{
+    display: none;
   }
-  .site-header .mainNav li{
-    display: inline-table;
-    padding: 0 20px;
-  }
+
+  // Mobile NAV
+  .mobileNav{
+    .openNav{
+        filter: brightness(0) invert(1);
+        height: 40px;
+        width: 40px;
+    }
+    .mobileContent{
+      display: none;
+      width: 50vw;
+      background-color: #fff;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 999;
+      padding: 1em 0;
+      height: 100vh;
+      .closeNav{
+        text-align: right;
+        padding: 0 2em;
+        img{
+          width: 40px;
+          height: 40px;
+        }
+      }
   
-  .site-header .navContainer{
-    padding: 5px 30px;
+      ul{
+        padding: 1em 0 0 1em;
+        li{
+          list-style: none;
+          text-transform: uppercase;
+          margin: 20px 0;
+          a{
+            color: #000;
+            text-decoration: none;
+            &:hover{
+              color: #00999D;
+            }
+          }
+        }
+      }
+    }
+    .active{
+      display: block;
+    }
   }
-  .site-header{
-    background-color: #000;
+
+  // .overlay{
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: 100;
+  //   background-color: rgba(0,0,0,0.5);
+  // }
+
+
+
+  @media (min-width: 1000px) {
+    .mobileNav{
+      display: none;
+    }
+    .mainNav{
+      display: unset;
+    }
   }
