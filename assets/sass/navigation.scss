@@ -2,6 +2,7 @@ body{
   padding-top: 50px;
 }
 .site-header{
+  z-index: 101;
   background-color: #000;
   display: flex;
   justify-content: center;
@@ -11,7 +12,6 @@ body{
   top: 0;
   right: 0;
   left: 0;
-  z-index: 20;
   .navContainer{
     width: 100%;
     padding: 0 15px;

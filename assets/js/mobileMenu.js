@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     open.addEventListener('click', toggleNav, false);
     close.addEventListener('click', toggleNav, false);
+    overlay.addEventListener('click', toggleNav, false);
 
     function toggleNav(){
         mobileContent.classList.toggle('active');
