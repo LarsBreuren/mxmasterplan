@@ -14,12 +14,12 @@ get_header(); ?>
   </div>
   <div class="container">
   <main>
-    <div class="text">
+    <div class="text mainChild">
       <h1><?php the_field('hoofd_tekst_titel', 15); ?></h1>
       <p><?php the_field('hoofd_tekst', 15); ?></p>
       <a  href="<?php the_field('hoofd_tekst_link', 15); ?>" class="smallCtaButton"><?php the_field('hoofd_tekst_link_tekst', 15); ?></a>
     </div>
-    <div class="amount">
+    <div class="amount mainChild">
     <div class="background" style="background-image: url(' <?php echo get_theme_file_uri('/assets/images/icons/motorbike.svg') ?>')"></div>
       <div class="wrapper">
         <div class="number">
@@ -27,7 +27,7 @@ get_header(); ?>
           <p id="value" class="value" akhi="<?php the_field('huidig_opgehaald_bedrag', 15); ?>">0</p>
           <p>,-</p>
         </div>
-        <div class="text">Opgehaald</div>
+        <div class="text">Opgehaald voor het MX-masterplan</div>
       </div>
     </div>
   </main>

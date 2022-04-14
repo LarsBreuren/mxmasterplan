@@ -1,28 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {  
-  function counter(){
-      const counters = document.querySelectorAll('.value');
-      const speed = 300;
-      
-      counters.forEach( counter => {
-        const animate = () => {
-            const value = +counter.getAttribute('akhi');
-            const data = +counter.innerText;
-          
-            const time = value / speed;
-          if(data < value) {
-                counter.innerText = Math.ceil(data + time);
-                setTimeout(animate, 1);
-              }else{
-                counter.innerText = value;
-              }
-          
-        }
-        animate();
-      });
-      doCheck = false;
-  }
-  let doCheck = true;
+
+function counter(){
+    const counters = document.querySelectorAll('.value');
+    const speed = 300;
+    
+    counters.forEach( counter => {
+      const animate = () => {
+          const value = +counter.getAttribute('akhi');
+          const data = +counter.innerText;
+        
+          const time = value / speed;
+        if(data < value) {
+              counter.innerText = Math.ceil(data + time);
+              setTimeout(animate, 1);
+            }else{
+              counter.innerText = value;
+            }
+        
+      }
+      animate();
+    });
+    doCheck = false;
+}
   
+let doCheck = true;
+
 if (doCheck){
   window.addEventListener('scroll',(event) => {
     if (isInViewport(document.getElementById("value")) && doCheck){
