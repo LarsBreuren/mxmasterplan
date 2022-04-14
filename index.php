@@ -19,12 +19,16 @@ get_header(); ?>
       <p><?php the_field('hoofd_tekst', 15); ?></p>
       <a  href="<?php the_field('hoofd_tekst_link', 15); ?>" class="smallCtaButton"><?php the_field('hoofd_tekst_link_tekst', 15); ?></a>
     </div>
-    <div class="calculator">
-        <div class="bar">
-          <progress max="<?php the_field('streef_bedrag', 15); ?>" value="<?php the_field('huidig_opgehaald_bedrag', 15); ?>"> 70% </progress>
-          <img src="<?php echo get_theme_file_uri('/assets/images/icons/flag-checkered.svg') ?>" alt="finish vlag icoon" class="flagIcon" />
+    <div class="amount">
+    <div class="background" style="background-image: url(' <?php echo get_theme_file_uri('/assets/images/icons/motorbike.svg') ?>')"></div>
+      <div class="wrapper">
+        <div class="number">
+          <p class="euro">&euro;</p>
+          <p class="value" akhi="546788">0</p>
+          <p>,-</p>
         </div>
-          <p><span class="current">&euro;<?php the_field('huidig_opgehaald_bedrag', 15); ?></span> / &euro;<?php the_field('streef_bedrag', 15); ?></p>
+        <div class="text">Opgehaald</div>
+      </div>
     </div>
   </main>
 </div>
