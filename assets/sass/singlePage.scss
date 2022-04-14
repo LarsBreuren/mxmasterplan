@@ -41,7 +41,6 @@
             background-size: cover;
             background-position: center;
             height: 100%;
-            max-height: 80vh;
             width: 100%;
         }
         .opacity{
@@ -101,6 +100,7 @@
 
         .singleBanner{
             height: 40vh;
+            min-height: 400px;
         }
     }
 };
@@ -111,6 +111,7 @@
     }
     .single{
         .singleBanner{
+            min-height: 450px;
             height: 60vh;
             width: unset;
             .bannerTitle {
