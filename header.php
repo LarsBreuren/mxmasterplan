@@ -17,21 +17,24 @@
              <div><img class="logo" src="<?php echo get_theme_file_uri('/assets/images/logo-blue.svg') ?>"></div></a>
         </div>
         <div class="mainNav">
-          <?php
-          wp_nav_menu( array( 
-              'theme_location' => 'my-custom-menu', 
-              'menu' => 'main-menu',
-              'container_class' => 'custom-menu-class' ) ); 
-          ?>
+        <?php 
+            wp_nav_menu( 
+                array( 
+                    'theme_location' => 'my-custom-menu'
+                ) 
+            ); 
+        ?>
         </div>
         <div class="mobileNav">
         <img class="openNav" id="openNav" src="<?php echo get_theme_file_uri('/assets/images/icons/menu.svg') ?>">
           <div class="mobileContent" id="mobileContent">
             <div class="closeNav"><img id="closeNav" src="<?php echo get_theme_file_uri('/assets/images/icons/window-close.svg') ?>"></div>
-              <?php
-              wp_nav_menu( array( 
-                  'menu' => 'mobile-menu',
-                  'container_class' => 'custom-menu-class' ) ); 
+            <?php 
+                  wp_nav_menu( 
+                      array( 
+                          'theme_location' => 'my-custom-menu'
+                      ) 
+                  ); 
               ?>
             </div>
         </div>
