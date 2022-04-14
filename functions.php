@@ -26,11 +26,10 @@ function university_files() {
         if( is_page( array( 'FAQ' ) ) ){
           wp_enqueue_script('my-script', get_template_directory_uri() .'/assets/js/faq.js');	
         }
+        if( is_page( array( 'Home' ) ) ){
+          wp_enqueue_script('count', get_template_directory_uri() .'/assets/js/count.js');
+        }
         wp_enqueue_script('mobileMenu', get_template_directory_uri() .'/assets/js/mobileMenu.js');	
-
-        wp_enqueue_script('count',
-        get_template_directory_uri() .'/assets/js/count.js');
-
     }
     add_action( 'wp_enqueue_scripts', 'my_scripts' );
 ?>

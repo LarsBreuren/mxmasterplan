@@ -24,7 +24,7 @@ get_header(); ?>
       <div class="wrapper">
         <div class="number">
           <p class="euro">&euro;</p>
-          <p class="value" akhi="546788">0</p>
+          <p id="value" class="value" akhi="546788">0</p>
           <p>,-</p>
         </div>
         <div class="text">Opgehaald</div>
