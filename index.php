@@ -21,14 +21,14 @@ get_header(); ?>
     </div>
     <div class="amount mainChild">
     <div class="background" style="background-image: url(' <?php echo get_theme_file_uri('/assets/images/icons/motorbike.svg') ?>')"></div>
-      <div class="wrapper">
+      <!-- <div class="wrapper">
         <div class="number">
           <p class="euro">&euro;</p>
           <p id="value" class="value" akhi="<?php the_field('huidig_opgehaald_bedrag', 15); ?>">0</p>
           <p>,-</p>
         </div>
         <div class="text">Opgehaald voor het MX-masterplan</div>
-      </div>
+      </div> -->
     </div>
   </main>
 </div>
