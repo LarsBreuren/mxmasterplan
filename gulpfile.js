@@ -7,7 +7,7 @@ const concat = require('gulp-concat');
 
 function style() {
 
-    return gulp.src("./assets/sass/*.scss") 
+    return gulp.src("./assets/sass/main.scss") 
 
     .pipe(sass().on('error',sass.logError))
     .pipe(concat('styles.css'))
@@ -17,13 +17,7 @@ function style() {
 }
 
 function watch() {
-    browserSync.init({
-        server: {
-            proxy: "http://localhost/mxmasterplan/",
-            port: 80
-        }
-    });
-    gulp.watch('./assets/sass/*.scss', style);
+    gulp.watch('./assets/sass/mx-styling/*.scss', style);
 }
 
 exports.style = style;

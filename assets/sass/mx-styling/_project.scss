@@ -1,0 +1,32 @@
+.projects{
+    .content{
+        max-width: 750px;
+        margin: 0 auto;
+        h2,p{
+            margin: 0;
+        }
+        .pillars{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 5em 0;
+            .pillar{
+                width: 100%;
+                text-align: center;
+                margin: 2em 0;
+                @include respond-to('xs') {
+                    width: 33.3333%;
+                    margin:0;
+                  }
+                h2{
+                    color: #000;
+                    margin: 0;
+                }
+                img{
+                    width: 85px;
+                    height: 85px;
+                }
+            }
+        }
+    }
+}
+
