@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {  
-console.log('loaded');
     const open = document.getElementById("openNav");
     const close = document.getElementById("closeNav");
     const overlay = document.getElementById("overlay");

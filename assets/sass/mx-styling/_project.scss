@@ -8,7 +8,10 @@
         .pillars{
             display: flex;
             flex-wrap: wrap;
-            margin: 5em 0;
+            margin: 1em 0;
+            @include respond-to('xs') {
+                margin: 5em 0;
+              }
             .pillar{
                 width: 100%;
                 text-align: center;
@@ -18,12 +21,13 @@
                     margin:0;
                   }
                 h2{
-                    color: #000;
+                    color: $dark;
                     margin: 0;
                 }
                 img{
                     width: 85px;
                     height: 85px;
+                    filter: invert(91%) sepia(0%) saturate(0%) hue-rotate(249deg) brightness(86%) contrast(87%);
                 }
             }
         }

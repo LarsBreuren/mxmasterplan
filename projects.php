@@ -20,7 +20,6 @@
         <h1> <?php the_field('titel', 330); ?></h1>
         <p><?php the_field('hoofdtekst', 330); ?> </p>
         <div class="pillars">
-
             <div class="pillar">
                 <img src="<?php echo get_theme_file_uri('/assets/images/icons/note-check.svg') ?>"> <!-- Made by creaticca creative agency - noun project -->
                 <h2>Vergunningen</h2>
@@ -37,13 +36,35 @@
         </div>
 
         <p><?php the_field('pijlers', 330); ?> </p>
-
-        <?php 
-
-echo do_shortcode( ' [TP_PIEBUILDER_DOUGHNUT title="Pie Chart" values="20, 30, 50" labels="Donaties, Ondersteuning clubs, Stichtings kosten" colors="#E6E6FA, #E0FFFF, #00999d"]' );
-
-?>
-
+        
+        <?php if( get_field('pie_chart_actief', 330) ) { ?>
+            <div class="wrapper"> <!-- with help from: https://codepen.io/MaciejCaputa/pen/VjVpRe -->
+                <h1>Uitgaven en inkomsten</h1>
+                <div class="pie-charts">
+                    <div class="pieID--micro-skills pie-chart--wrapper">
+                    <h2>Inkomsten</h2>
+                    <div class="pie-chart">
+                        <div class="pie-chart__pie"></div>
+                        <ul class="pie-chart__legend">
+                        <li><em>Donaties</em><span>7500</span></li>
+                        <li><em>MX-Masterplan onkosten</em><span>58000</span></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="pieID--categories pie-chart--wrapper">
+                    <h2>Uitgaven</h2>
+                    <div class="pie-chart">
+                        <div class="pie-chart__pie"></div>
+                        <ul class="pie-chart__legend">
+                        <li><em>Vergunningen</em><span>56000</span></li>
+                        <li><em>Veiligheidssystemen</em><span>32000</span></li>
+                        <li><em>Verduurzaming</em><span>25500</span></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
     </div>
- </div>
+</div>
 <?php get_footer(); ?>

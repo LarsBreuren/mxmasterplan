@@ -1,6 +1,7 @@
 
 // First the settings and variables
-@import "breakpoints";
+@import "settings/breakpoints";
+@import "settings/variables";
 
 // Custom styling
 @import "mx-styling/experts";
@@ -17,3 +18,4 @@
 @import "mx-styling/project";
 @import "mx-styling/secondaryBanner";
 @import "mx-styling/singlePage";
+@import "mx-styling/pieCharts";
