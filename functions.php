@@ -36,6 +36,7 @@ function university_files() {
         if( is_page( array( 'is_front_page()' ) ) ){
         wp_enqueue_script('counter', get_template_directory_uri() .'/assets/js/count.js');	
         }
+        wp_enqueue_script('mobileMenu', get_template_directory_uri() .'/assets/js/mobileMenu.js');	
     }
     add_action( 'wp_enqueue_scripts', 'my_scripts' );
 ?>

@@ -7,7 +7,9 @@ jQuery(document).ready(function($) {
     "#E25E0E",
     "#c9d0d4",
   ];
-  let count = 0;
+  let colorCount = 0;
+  let totalCount = 0;
+  let currentPie = 0;
   function sliceSize(dataNum, dataTotal) {
       return (dataNum / dataTotal) * 360;
     }
@@ -53,11 +55,11 @@ jQuery(document).ready(function($) {
           "#2b2e38",
           "#00999d",
           "#c9d0d4",
-          "red"
         ];
     
       $(dataElement+" span").each(function() {
         listData.push(Number($(this).html()));
+        totalCount += Number($(this).html());
       });
     
       for(i = 0; i < listData.length; i++) {
@@ -66,12 +68,16 @@ jQuery(document).ready(function($) {
     
       for(i=0; i < listData.length; i++) {
         var size = sliceSize(listData[i], listTotal);
-        iterateSlices(id, size, pieElement, offset, i, 0, colorsceme[count]);
-        $(dataElement + " li:nth-child(" + (i + 1) + ")").css("border-color", colorsceme[count]);
+        iterateSlices(id, size, pieElement, offset, i, 0, colorsceme[colorCount]);
+        $(dataElement + " li:nth-child(" + (i + 1) + ")").css("border-color", colorsceme[colorCount]);
         offset += size;
-        count++
+        colorCount++
       }
-      count = 0;
+      $('#total'+currentPie ).html(totalCount); //Fill id's with total amount of pie, use currentPie to assign number to id
+      
+      colorCount = 0;
+      totalCount = 0; //Reset counts for new pie chart
+      currentPie++ 
     }
     
     function createPieCharts() {

@@ -48,6 +48,7 @@
                         <ul class="pie-chart__legend">
                             <li><em>Donaties</em><div>&euro;<span>670000</span></div></li>
                         </ul>
+                        <p>Totaal: &euro;<b id="total0"></b></p>
                     </div>
                     </div>
                     <div class="pie2 pieID--categories pie-chart--wrapper">
@@ -60,6 +61,7 @@
                             <li><em>Verduurzaming</em><div>&euro;<span>13000</span></div></li>
                             <li><em>Onkosten</em><div>&euro;<span>30000</span></div></li>
                         </ul>
+                        <p>Totaal: &euro;<b id="total1"></b></p>
                     </div>
                     </div>
                 </div>
