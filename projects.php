@@ -46,8 +46,7 @@
                     <div class="pie-chart">
                         <div class="pie-chart__pie"></div>
                         <ul class="pie-chart__legend">
-                        <li><em>Donaties</em><span>7500</span></li>
-                        <li><em>MX-Masterplan onkosten</em><span>58000</span></li>
+                            <li><em>Donaties</em><span>670000</span></li>
                         </ul>
                     </div>
                     </div>
@@ -56,9 +55,10 @@
                     <div class="pie-chart">
                         <div class="pie-chart__pie"></div>
                         <ul class="pie-chart__legend">
-                        <li><em>Vergunningen</em><span>56000</span></li>
-                        <li><em>Veiligheidssystemen</em><span>32000</span></li>
-                        <li><em>Verduurzaming</em><span>25500</span></li>
+                            <li><em>Vergunningen</em><span>20000</span></li>
+                            <li><em>Veiligheidssystemen</em><span>25000</span></li>
+                            <li><em>Verduurzaming</em><span>13000</span></li>
+                            <li><em>Onkosten</em><span>30000</span></li>
                         </ul>
                     </div>
                     </div>

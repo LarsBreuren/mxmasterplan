@@ -12,9 +12,13 @@ body{
   top: 0;
   right: 0;
   left: 0;
+  padding-right: 15px;
+  box-shadow: 0 0 60px rgba(0,0,0,.27);
+  @include respond-to('md') {
+    padding-right: 0px;
+  }
   .navContainer{
     width: 100%;
-    padding: 0 15px;
   }
   .content{
     display: flex;
@@ -28,7 +32,7 @@ body{
         font-size: 20px;
         text-transform: uppercase;
         &:hover{
-          color: #00999D;
+          color: $main;
         }
       }
       li{
@@ -37,16 +41,35 @@ body{
       }
       .current_page_item{
         a{
-          color: #00999d;
+          color: $main;
         }
       }
     } 
     .logo{
-      div{
-        height: 35px;
-        img{
-          height: 100%;
+      background: #fff;
+      height: 50px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      a{
+        display: flex;
+        align-items: center;
+      }
+      .skew{
+        transform: skew(-22deg);
+        height: 50px;
+        background: #fff;
+        width: 23px;
+        position: absolute;
+        right: -12px;
+        display: none;
+        @include respond-to('xs') {
+          display: unset;
         }
+      }
+      img{
+        height: 45px;
       }
     }
   }
@@ -111,7 +134,7 @@ body{
         margin: 0 auto;
         .current_page_item{
           a{
-            color: #00999d;
+            color: $main;
           }
         }
         li{
@@ -125,7 +148,7 @@ body{
             color: #000;
             text-decoration: none;
             &:hover{
-              color: #00999D;
+              color: $main;
             }
           }
         }
@@ -155,6 +178,7 @@ body{
   @media (min-width: 1000px) {
     .site-header{
       padding: 5px 0;
+      height: 50px;
     }
     .mobileNav{
       display: none;

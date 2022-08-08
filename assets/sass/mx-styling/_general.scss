@@ -20,22 +20,8 @@ body {
     height: auto;
   }
 
-  .logo{
-    h1{ 
-      margin: 0;
-      font-weight: 700;
-    }
-    a{
-      color: #fff;
-      font-size: 1.5em;
-      text-transform: uppercase;
-      margin: 0;
-      text-decoration: none;
-    }
-  }
-
   .ctaButton, .smallCtaButton{
-    background-color: #00999D;
+    background-color: $main;
     display: inline-block;
     padding: 1em 2em;
     color: #fff;

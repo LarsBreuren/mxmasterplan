@@ -13,8 +13,9 @@
     <div class="navContainer">
       <div class="content">
         <div class="logo">
-          <a href="https://mx-masterplan.com/">           
-             <div><img class="logo" src="<?php echo get_theme_file_uri('/assets/images/logo-blue.svg') ?>"></div></a>
+          <a href="<?php echo home_url(); ?>">           
+             <img src="<?php echo get_theme_file_uri('/assets/images/logo-def-small.svg') ?>"></a>
+             <div class="skew"></div>
         </div>
         <div class="mainNav">
         <?php 
