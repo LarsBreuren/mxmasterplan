@@ -97,12 +97,14 @@
         margin-bottom: 0.7em;
         padding-left: 0.5em;
         border-left: 1.25em solid black;
+        display: flex;
+        justify-content: space-between;
     }
     .pie-chart__legend em {
         font-style: normal;
     }
     .pie-chart__legend span {
-        float: right;
+       
     }
     
     .pie-charts {

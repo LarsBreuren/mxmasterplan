@@ -41,24 +41,24 @@
             <div class="wrapper"> <!-- with help from: https://codepen.io/MaciejCaputa/pen/VjVpRe -->
                 <h1>Uitgaven en inkomsten</h1>
                 <div class="pie-charts">
-                    <div class="pieID--micro-skills pie-chart--wrapper">
+                    <div class="pie1 pieID--micro-skills pie-chart--wrapper">
                     <h2>Inkomsten</h2>
                     <div class="pie-chart">
                         <div class="pie-chart__pie"></div>
                         <ul class="pie-chart__legend">
-                            <li><em>Donaties</em><span>670000</span></li>
+                            <li><em>Donaties</em><div>&euro;<span>670000</span></div></li>
                         </ul>
                     </div>
                     </div>
-                    <div class="pieID--categories pie-chart--wrapper">
+                    <div class="pie2 pieID--categories pie-chart--wrapper">
                     <h2>Uitgaven</h2>
                     <div class="pie-chart">
                         <div class="pie-chart__pie"></div>
                         <ul class="pie-chart__legend">
-                            <li><em>Vergunningen</em><span>20000</span></li>
-                            <li><em>Veiligheidssystemen</em><span>25000</span></li>
-                            <li><em>Verduurzaming</em><span>13000</span></li>
-                            <li><em>Onkosten</em><span>30000</span></li>
+                            <li><em>Vergunningen</em><div>&euro;<span>20000</span></div></li>
+                            <li><em>Veiligheidssystemen</em><div>&euro;<span>25000</span></div></li>
+                            <li><em>Verduurzaming</em><div>&euro;<span>13000</span></div></li>
+                            <li><em>Onkosten</em><div>&euro;<span>30000</span></div></li>
                         </ul>
                     </div>
                     </div>

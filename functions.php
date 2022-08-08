@@ -33,7 +33,9 @@ function university_files() {
         else if( is_page( array( 'Projecten' ) ) ){
           wp_enqueue_script('pie-chart', get_template_directory_uri() .'/assets/js/pieChart.js', array('jquery'), null, true); 
         }
+        if( is_page( array( 'is_front_page()' ) ) ){
         wp_enqueue_script('counter', get_template_directory_uri() .'/assets/js/count.js');	
+        }
     }
     add_action( 'wp_enqueue_scripts', 'my_scripts' );
 ?>

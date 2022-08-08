@@ -1,7 +1,13 @@
 
 
 jQuery(document).ready(function($) {
-  console.log('heya, pie chart JS is loaded!');
+  const colorsceme  = [ //Order followed for charts
+    "#2b2e38",
+    "#6c6f78",
+    "#E25E0E",
+    "#c9d0d4",
+  ];
+  let count = 0;
   function sliceSize(dataNum, dataTotal) {
       return (dataNum / dataTotal) * 360;
     }
@@ -46,10 +52,9 @@ jQuery(document).ready(function($) {
         color         = [
           "#2b2e38",
           "#00999d",
-          "#c9d0d4"
+          "#c9d0d4",
+          "red"
         ];
-    
-      color = shuffle( color );
     
       $(dataElement+" span").each(function() {
         listData.push(Number($(this).html()));
@@ -61,22 +66,12 @@ jQuery(document).ready(function($) {
     
       for(i=0; i < listData.length; i++) {
         var size = sliceSize(listData[i], listTotal);
-        iterateSlices(id, size, pieElement, offset, i, 0, color[i]);
-        $(dataElement + " li:nth-child(" + (i + 1) + ")").css("border-color", color[i]);
+        iterateSlices(id, size, pieElement, offset, i, 0, colorsceme[count]);
+        $(dataElement + " li:nth-child(" + (i + 1) + ")").css("border-color", colorsceme[count]);
         offset += size;
+        count++
       }
-    }
-    
-    function shuffle(a) {
-        var j, x, i;
-        for (i = a.length; i; i--) {
-            j = Math.floor(Math.random() * i);
-            x = a[i - 1];
-            a[i - 1] = a[j];
-            a[j] = x;
-        }
-    
-        return a;
+      count = 0;
     }
     
     function createPieCharts() {
