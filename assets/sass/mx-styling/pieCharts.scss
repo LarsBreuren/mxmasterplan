@@ -1,5 +1,5 @@
-.wrapper{
-            
+.pies{
+    margin-top: 3em;
     @-webkit-keyframes bake-pie {
         from {
         transform: rotate(0deg) translate3d(0, 0, 0);
@@ -9,6 +9,9 @@
         from {
         transform: rotate(0deg) translate3d(0, 0, 0);
         }
+    }
+    h2{
+        text-align: center;
     }
     .pie-chart {
         font-family: "Open Sans", Arial;

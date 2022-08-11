@@ -17,8 +17,8 @@
 
  <div class="container projects">
     <div class="content">
-        <h1> <?php the_field('titel', 330); ?></h1>
-        <p><?php the_field('hoofdtekst', 330); ?> </p>
+        <h1> <?php the_field('titel'); ?></h1>
+        <p><?php the_field('hoofdtekst'); ?> </p>
         <div class="pillars">
             <div class="pillar">
                 <img src="<?php echo get_theme_file_uri('/assets/images/icons/note-check.svg') ?>"> <!-- Made by creaticca creative agency - noun project -->
@@ -35,35 +35,62 @@
 
         </div>
 
-        <p><?php the_field('pijlers', 330); ?> </p>
+        <p><?php the_field('pijlers'); ?> </p>
         
-        <?php if( get_field('pie_chart_actief', 330) ) { ?>
-            <div class="wrapper"> <!-- with help from: https://codepen.io/MaciejCaputa/pen/VjVpRe -->
-                <h1>Uitgaven en inkomsten</h1>
+        <?php if( get_field('pie_chart_actief') ) { ?>
+            <div class="pies wrapper"> <!-- with help from: https://codepen.io/MaciejCaputa/pen/VjVpRe -->
+                <h2>Inkomsten en uitgaven </h2>
                 <div class="pie-charts">
                     <div class="pie1 pieID--micro-skills pie-chart--wrapper">
-                    <h2>Inkomsten</h2>
+                    <h3>Inkomsten</h3>
                     <div class="pie-chart">
                         <div class="pie-chart__pie"></div>
                         <ul class="pie-chart__legend">
-                            <li><em>Donaties</em><div>&euro;<span>670000</span></div></li>
+                           
+                        <?php if(get_field('inkomst_label_1') && get_field('inkomst_waarde_1') ){ ?>
+                            <li><em><?php echo get_field('inkomst_label_1') ?></em><div>&euro;<span><?php echo get_field('inkomst_waarde_1') ?></span></div></li>
+                        <?php  } ?>
+                        <?php if(get_field('inkomst_label_2') && get_field('inkomst_waarde_2') ){ ?>
+                            <li><em><?php echo get_field('inkomst_label_2') ?></em><div>&euro;<span><?php echo get_field('inkomst_waarde_2') ?></span></div></li>
+                        <?php  } ?>
+                        <?php if(get_field('inkomst_label_3') && get_field('inkomst_waarde_3') ){ ?>
+                            <li><em><?php echo get_field('inkomst_label_3') ?></em><div>&euro;<span><?php echo get_field('inkomst_waarde_3') ?></span></div></li>
+                        <?php  } ?>
+                        <?php if(get_field('inkomst_label_4') && get_field('inkomst_waarde_4') ){ ?>
+                            <li><em><?php echo get_field('inkomst_label_4') ?></em><div>&euro;<span><?php echo get_field('inkomst_waarde_4') ?></span></div></li>
+                        <?php  } ?>
+
                         </ul>
                         <p>Totaal: &euro;<b id="total0"></b></p>
                     </div>
                     </div>
                     <div class="pie2 pieID--categories pie-chart--wrapper">
-                    <h2>Uitgaven</h2>
+                    <h3>Uitgaven</h3>
                     <div class="pie-chart">
                         <div class="pie-chart__pie"></div>
                         <ul class="pie-chart__legend">
-                            <li><em>Vergunningen</em><div>&euro;<span>20000</span></div></li>
-                            <li><em>Veiligheidssystemen</em><div>&euro;<span>25000</span></div></li>
-                            <li><em>Verduurzaming</em><div>&euro;<span>13000</span></div></li>
-                            <li><em>Onkosten</em><div>&euro;<span>30000</span></div></li>
+
+                        <?php if(get_field('uitgave_label_1') && get_field('uitgave_waarde_1') ){ ?>
+                            <li><em><?php echo get_field('uitgave_label_1') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_1') ?></span></div></li>
+                        <?php  } ?>
+                        <?php if(get_field('uitgave_label_2') && get_field('uitgave_waarde_2') ){ ?>
+                            <li><em><?php echo get_field('uitgave_label_2') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_2') ?></span></div></li>
+                        <?php  } ?>
+                        <?php if(get_field('uitgave_label_3') && get_field('uitgave_waarde_3') ){ ?>
+                            <li><em><?php echo get_field('uitgave_label_3') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_3') ?></span></div></li>
+                        <?php  } ?>
+                        <?php if(get_field('uitgave_label_4') && get_field('uitgave_waarde_4') ){ ?>
+                            <li><em><?php echo get_field('uitgave_label_4') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_4') ?></span></div></li>
+                        <?php  } ?>
+                        <?php if(get_field('uitgave_label_5') && get_field('uitgave_waarde_5') ){ ?>
+                            <li><em><?php echo get_field('uitgave_label_5') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_5') ?></span></div></li>
+                        <?php  } ?>
+
                         </ul>
                         <p>Totaal: &euro;<b id="total1"></b></p>
                     </div>
                     </div>
+                    <p style="color: grey">Data gebaseerd op berekening van <?php echo get_field('datum_data') ?>. </p>
                 </div>
             </div>
         <?php } ?>

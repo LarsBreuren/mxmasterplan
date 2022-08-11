@@ -2,10 +2,13 @@
 
 jQuery(document).ready(function($) {
   const colorsceme  = [ //Order followed for charts
-    "#2b2e38",
-    "#6c6f78",
-    "#E25E0E",
-    "#c9d0d4",
+  "#E25E0E",
+  "#F4B400",
+  "#0F9D58",
+  "#4285F4",
+  "#c9d0d4",
+  "#2b2e38",
+  "#6c6f78",
   ];
   let colorCount = 0;
   let totalCount = 0;
