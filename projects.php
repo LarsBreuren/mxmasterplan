@@ -39,58 +39,52 @@
         
         <?php if( get_field('pie_chart_actief') ) { ?>
             <div class="pies wrapper"> <!-- with help from: https://codepen.io/MaciejCaputa/pen/VjVpRe -->
-                <h2>Inkomsten en uitgaven </h2>
+                <h1>Uitgaven en inkomsten</h1>
                 <div class="pie-charts">
+
                     <div class="pie1 pieID--micro-skills pie-chart--wrapper">
-                    <h3>Inkomsten</h3>
-                    <div class="pie-chart">
-                        <div class="pie-chart__pie"></div>
-                        <ul class="pie-chart__legend">
-                           
-                        <?php if(get_field('inkomst_label_1') && get_field('inkomst_waarde_1') ){ ?>
-                            <li><em><?php echo get_field('inkomst_label_1') ?></em><div>&euro;<span><?php echo get_field('inkomst_waarde_1') ?></span></div></li>
-                        <?php  } ?>
-                        <?php if(get_field('inkomst_label_2') && get_field('inkomst_waarde_2') ){ ?>
-                            <li><em><?php echo get_field('inkomst_label_2') ?></em><div>&euro;<span><?php echo get_field('inkomst_waarde_2') ?></span></div></li>
-                        <?php  } ?>
-                        <?php if(get_field('inkomst_label_3') && get_field('inkomst_waarde_3') ){ ?>
-                            <li><em><?php echo get_field('inkomst_label_3') ?></em><div>&euro;<span><?php echo get_field('inkomst_waarde_3') ?></span></div></li>
-                        <?php  } ?>
-                        <?php if(get_field('inkomst_label_4') && get_field('inkomst_waarde_4') ){ ?>
-                            <li><em><?php echo get_field('inkomst_label_4') ?></em><div>&euro;<span><?php echo get_field('inkomst_waarde_4') ?></span></div></li>
-                        <?php  } ?>
+                        <h2>Inkomsten</h2>
+                        <div class="pie-chart">
+                            <div class="pie-chart__pie"></div>
+                            <ul class="pie-chart__legend">
+                            <?php
+                        $inkomsten = get_field('inkomsten');
+                        $inkomstenCount =  count($inkomsten) / 2; // Count amount of fields in ACF and use this for loop, /2 because of the labels
 
-                        </ul>
-                        <p>Totaal: &euro;<b id="total0"></b></p>
+                        for ($x = 1; $x <= $inkomstenCount; $x++) { 
+                        $inkomstenLabel = esc_attr( $inkomsten['label_'.$x] );
+                        $inkomstenWaarde = esc_attr( $inkomsten['waarde_'.$x] );
+
+                        if(!empty($inkomstenLabel) && !empty($inkomstenWaarde) ){
+                        ?><li><em><?php echo $inkomstenLabel ?></em><div>&euro;<span><?php echo $inkomstenWaarde ?></span></div></li>
+                        <?php  }} ?>
+                            </ul>
+                            <p>Totaal: &euro;<b id="total0"></b></p>
+                        </div>
                     </div>
-                    </div>
+
                     <div class="pie2 pieID--categories pie-chart--wrapper">
-                    <h3>Uitgaven</h3>
-                    <div class="pie-chart">
-                        <div class="pie-chart__pie"></div>
-                        <ul class="pie-chart__legend">
+                        <h2>Uitgaven</h2>
+                        <div class="pie-chart">
+                            <div class="pie-chart__pie"></div>
+                            <ul class="pie-chart__legend">
+                            <?php
+                            $uitgaven = get_field('uitgaven');
+                            $uitgavenCount =  count($uitgaven) / 2; // Count amount of fields in ACF and use this for loop, /2 because of the labels
 
-                        <?php if(get_field('uitgave_label_1') && get_field('uitgave_waarde_1') ){ ?>
-                            <li><em><?php echo get_field('uitgave_label_1') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_1') ?></span></div></li>
-                        <?php  } ?>
-                        <?php if(get_field('uitgave_label_2') && get_field('uitgave_waarde_2') ){ ?>
-                            <li><em><?php echo get_field('uitgave_label_2') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_2') ?></span></div></li>
-                        <?php  } ?>
-                        <?php if(get_field('uitgave_label_3') && get_field('uitgave_waarde_3') ){ ?>
-                            <li><em><?php echo get_field('uitgave_label_3') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_3') ?></span></div></li>
-                        <?php  } ?>
-                        <?php if(get_field('uitgave_label_4') && get_field('uitgave_waarde_4') ){ ?>
-                            <li><em><?php echo get_field('uitgave_label_4') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_4') ?></span></div></li>
-                        <?php  } ?>
-                        <?php if(get_field('uitgave_label_5') && get_field('uitgave_waarde_5') ){ ?>
-                            <li><em><?php echo get_field('uitgave_label_5') ?></em><div>&euro;<span><?php echo get_field('uitgave_waarde_5') ?></span></div></li>
-                        <?php  } ?>
+                            for ($y = 1; $y <= $uitgavenCount; $y++) { 
+                            $uitgavenLabel = esc_attr( $uitgaven['label_'.$y] );
+                            $uitgavenWaarde = esc_attr( $uitgaven['waarde_'.$y] );
 
-                        </ul>
-                        <p>Totaal: &euro;<b id="total1"></b></p>
+                            if(!empty($uitgavenLabel) && !empty($uitgavenWaarde) ){
+                            ?>      
+                                <li><em><?php echo $uitgavenLabel ?></em><div>&euro;<span><?php echo $uitgavenWaarde ?></span></div></li>
+                            <?php  }} ?>
+                            </ul>
+                            <p>Totaal: &euro;<b id="total1"></b></p>
+                        </div>
                     </div>
-                    </div>
-                    <p style="color: grey">Data gebaseerd op berekening van <?php echo get_field('datum_data') ?>. </p>
+                    
                 </div>
             </div>
         <?php } ?>
