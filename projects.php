@@ -84,7 +84,7 @@
                             <p>Totaal: &euro;<b id="total1"></b></p>
                         </div>
                     </div>
-                    
+                    <p style="color: grey">Data gebaseerd op berekening van <?php echo get_field('datum_data') ?>. </p>
                 </div>
             </div>
         <?php } ?>
