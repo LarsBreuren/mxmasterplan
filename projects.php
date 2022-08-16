@@ -19,23 +19,24 @@
     <div class="content">
         <h1> <?php the_field('titel'); ?></h1>
         <p><?php the_field('hoofdtekst'); ?> </p>
-        <div class="pillars">
-            <div class="pillar">
-                <img src="<?php echo get_theme_file_uri('/assets/images/icons/note-check.svg') ?>"> <!-- Made by creaticca creative agency - noun project -->
-                <h2>Vergunningen</h2>
-            </div>
-            <div class="pillar">
-                <img src="<?php echo get_theme_file_uri('/assets/images/icons/motorcross-helmet.svg') ?>"> <!-- Made by creaticca creative agency - noun project -->
-                <h2>Veiligheid</h2>
-            </div>
-            <div class="pillar">
-                <img src="<?php echo get_theme_file_uri('/assets/images/icons/forest.svg') ?>"> <!-- Made by creaticca creative agency - noun project -->
-                <h2>Verduurzaming</h2>
-            </div>
 
+        <div class="textBlock">
+            <img src="<?php echo get_theme_file_uri('/assets/images/icons/note-check.svg') ?>">
+            <?php the_field('vergunningen'); ?>
+            <a href="<?php echo site_url('/vergunningen'); ?>" class="smallCtaButton">Lees meer</a>
         </div>
 
-        <p><?php the_field('pijlers'); ?> </p>
+        <div class="textBlock">
+            <img src="<?php echo get_theme_file_uri('/assets/images/icons/motorcross-helmet.svg') ?>"> 
+            <?php the_field('veiligheid'); ?>
+            <a href="<?php echo site_url('/veiligheid'); ?>" class="smallCtaButton">Lees meer</a>
+        </div>
+
+        <div class="textBlock">
+            <img src="<?php echo get_theme_file_uri('/assets/images/icons/forest.svg') ?>">    
+            <?php the_field('verduurzaming'); ?>
+            <a href="<?php echo site_url('/verduurzaming'); ?>" class="smallCtaButton">Lees meer</a>
+        </div>
         
         <?php if( get_field('pie_chart_actief') ) { ?>
             <div class="pies wrapper"> <!-- with help from: https://codepen.io/MaciejCaputa/pen/VjVpRe -->

@@ -30,6 +30,9 @@ footer{
     .footerContent{
         display: flex;
         justify-content: space-around;
+        .logo{
+            max-width: 250px;
+        }
         div{
             width: 33.33333%;
             padding: 1em;

@@ -5,66 +5,25 @@
         h2,p{
             margin: 0;
         }
-        .pillars{
-            display: flex;
-            flex-wrap: wrap;
-            margin: 1em 0;
-            @include respond-to('xs') {
-                margin: 5em 0;
-              }
-            .pillar{
-                width: 100%;
-                text-align: center;
-                margin: 2em 0;
-                @include respond-to('xs') {
-                    width: 33.3333%;
-                    margin:0;
+        .textBlock{
+            position: relative;
+            margin: 100px 0;
+            img{
+                position: absolute;
+                top: 0;
+                left: -75px;
+                width: 60px;
+                height: 60px;
+                display: none;
+                filter: invert(91%) sepia(0%) saturate(0%) hue-rotate(249deg) brightness(86%) contrast(87%);
+                @include respond-to('md') {
+                    display: unset;
                   }
-                h2{
-                    color: $dark;
-                    margin: 0;
-                }
-                img{
-                    width: 85px;
-                    height: 85px;
-                    filter: invert(91%) sepia(0%) saturate(0%) hue-rotate(249deg) brightness(86%) contrast(87%);
-                }
+            }
+            .smallCtaButton{
+                font-size: 1em;
+                margin-top: 15px;
             }
         }
     }
-    // .pie-charts{
-    //     .pie1, .pie2{
-    //         .slice{
-    //             &:first-child span{
-    //                 background-color: $main !important;
-    //             }
-    //             &:nth-child(2) span{
-    //                 background-color: rgb(76, 79, 88) !important;
-    //             }
-    //             &:nth-child(3) span{
-    //                 background-color: rgb(201, 208, 212)!important;
-    //             }
-    //             &:nth-child(4) span{
-    //                 background-color: #000 !important;
-    //             }
-    //         }
-    //         ul{
-    //             li{
-    //                 &:first-child{
-    //                     border-color: $main !important;
-    //                 }
-    //                 &:nth-child(2){
-    //                     border-color: rgb(76, 79, 88) !important;
-    //                 }
-    //                 &:nth-child(3){
-    //                     border-color: rgb(201, 208, 212)!important;
-    //                 }
-    //                 &:nth-child(4){
-    //                     border-color: #000 !important;
-    //                 }   
-    //             }
-    //         }
-    //     }
-    // }
 }
-
