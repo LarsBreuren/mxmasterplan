@@ -1,6 +1,7 @@
 <?php 
  /* Template Name: Homepage */
 get_header(); ?>
+<div class="home">
     <div class="heroBanner">
       <div class="opacity"></div>
       <div class="container">
@@ -105,6 +106,7 @@ get_header(); ?>
         </div>
       </div>
     </div>
+  </div>
   <?php  get_footer();
 ?>
 
