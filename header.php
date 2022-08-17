@@ -14,7 +14,7 @@
       <div class="content">
         <div class="logo">
           <a href="<?php echo home_url(); ?>">           
-             <img src="<?php echo get_theme_file_uri('/assets/images/logo-def-small.svg') ?>"></a>
+             <img src="<?php echo get_theme_file_uri('/assets/images/logo-def-with-text.svg') ?>"></a>
              <div class="skew"></div>
         </div>
         <div class="mainNav">
