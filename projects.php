@@ -89,7 +89,7 @@
                 </div>
             </div>
         <?php } ?>
-        <div class="textBlock">
+        <div class="textBlock futureExpenses">
             <?php echo get_field('toekomstige_uitgaven') ?>
         </div>
     </div>
