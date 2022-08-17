@@ -89,6 +89,9 @@
                 </div>
             </div>
         <?php } ?>
+        <div class="textBlock">
+            <?php echo get_field('toekomstige_uitgaven') ?>
+        </div>
     </div>
 </div>
 <?php get_footer(); ?>
