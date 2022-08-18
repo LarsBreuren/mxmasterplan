@@ -1,0 +1,68 @@
+.singleBanner{
+    position: relative;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 700;
+    height: 30vh;
+    width: 100%;
+    padding: 0;
+    min-height: 300px;
+    margin: 0 auto 25px auto;
+    @include respond-to('md') {
+        height: 40vh;
+        min-height: 400px;
+        margin: 0 auto 50px auto;
+    }
+    @include respond-to('xl') {
+        min-height: 450px;
+        height: 60vh;
+        width: unset;
+    }
+
+    .bannerTitle {
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 50px;
+        h1{
+            font-size: 1.7em;
+            color: #fff;
+            font-weight: 800;
+            padding: 0 1em;
+            @include respond-to('md') {
+                font-size: 2.5em;
+            }
+            @include respond-to('xl') {
+                font-size: 4em;
+                padding: 0 2em;
+            }
+        }
+    }
+    .mountain{
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        height: 100px;
+        display: none;
+
+        @include respond-to('md') {
+            display: unset;
+
+        }
+    }
+
+    .heroImage{
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
+    .opacity{
+        position: absolute;
+        top: 0;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.35);
+    }
+}
