@@ -30,8 +30,12 @@ footer{
     .footerContent{
         display: flex;
         justify-content: space-around;
+        padding: 0 20px;
         .logo{
-            width: 250px;
+            text-align: center;
+            img{
+                width: 250px;
+            }
         }
         div{
             width: 33.33333%;

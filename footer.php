@@ -2,7 +2,10 @@
     <div class="mountainContainer"><div class="ductape"></div><div class="mountain" style="background-image: url('<?php echo get_theme_file_uri('/assets/images/mountain.svg') ?>');"> </div></div>
     <div class="container">
         <div class="footerContent">
-            <div><img class="logo" src="<?php echo get_theme_file_uri('/assets/images/logo-footer-white.svg') ?>"></div>
+          <a class="logo" href="<?php echo home_url(); ?>">           
+           <img src="<?php echo get_theme_file_uri('/assets/images/logo-footer-white.svg') ?>">
+          </a>
+            <div class="skew"></div>
             <div class="links">
                 <ul>
                     <li><a href="<?php echo home_url(); ?>">Home</a></li>
