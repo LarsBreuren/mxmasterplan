@@ -25,6 +25,12 @@
 
             }
         }
+        .vimeoWrapper{
+            iframe{
+                width: 100%;
+                min-height: 400px;
+            }
+        }
         .firstText{
             margin-top: 0;
         }

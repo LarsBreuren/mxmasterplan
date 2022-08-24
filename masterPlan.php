@@ -23,6 +23,7 @@
               'post_type'			=> 'post',
               'posts_per_page'=> -1,
               'category_name' => 'het-masterplan', 
+              'orderby' => 'publish_date'
             ));
             if( $posts ): ?>	
                   <?php foreach( $posts as $post ):
