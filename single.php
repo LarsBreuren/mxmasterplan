@@ -34,16 +34,16 @@
               <?php endif; ?>
           </div>
 
-            <?php if( !empty( $blockImage ) ): ?>
-             <div class="textBlockImage"> <img class="textBlock " src="<?php echo esc_url($blockImage['url']); ?>" alt="<?php echo esc_attr($blockImage['alt']);  ?>" /></div>
-            <?php endif; ?>
-
-            <?php if( !empty( $vimeoVideo ) ): ?>
-              <div class="vimeoWrapper textBlock">
-                <iframe src="https://player.vimeo.com/video/<?php echo $vimeoVideo ?>?autoplay=0&muted=0&loop=0&controls=1" frameborder="0" allow="webkitallowfullscreen mozallowfullscreen allowfullscreen" allowfullscreen></iframe>
+          
+          <?php if( !empty( $vimeoVideo ) ): ?>
+            <div class="vimeoWrapper textBlock">
+              <iframe src="https://player.vimeo.com/video/<?php echo $vimeoVideo ?>?autoplay=0&muted=0&loop=0&controls=1" frameborder="0" allow="webkitallowfullscreen mozallowfullscreen allowfullscreen" allowfullscreen></iframe>
               </div>
-            <?php endif; ?>
-
+          <?php endif; ?>
+              
+          <?php if( !empty( $blockImage ) ): ?>
+            <div class="textBlockImage"> <img class="textBlock " src="<?php echo esc_url($blockImage['url']); ?>" alt="<?php echo esc_attr($blockImage['alt']);  ?>" /></div>
+          <?php endif; ?>
 
           <?php if( !empty( $textBlock2 ) ): ?>
             <div class="contentBlock">
