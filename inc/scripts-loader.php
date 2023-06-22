@@ -4,7 +4,7 @@
         if( is_page( array( 'FAQ' ) ) ){
           wp_enqueue_script('my-script', get_template_directory_uri() .'/assets/js/faq.js');	
         }
-        else if( is_page( array( 'Projecten' ) ) ){
+        else if( is_page( array( 'werkwijze' ) ) ){
           wp_enqueue_script('pie-chart', get_template_directory_uri() .'/assets/js/pieChart.js', array('jquery'), null, true); 
         }
         if( is_page( array( 'is_front_page()' ) ) ){
