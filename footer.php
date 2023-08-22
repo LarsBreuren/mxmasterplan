@@ -7,14 +7,14 @@
           </a>
             <div class="skew"></div>
             <div class="links">
-                <ul>
-                    <li><a href="<?php echo home_url(); ?>">Home</a></li>
-                    <li><a href="<?php echo site_url('/het-masterplan'); ?>">Het masterplan</a></li>
-                    <li><a href="<?php echo site_url('/nieuws'); ?>">Nieuws</a></li>
-                    <li><a href="<?php echo site_url('/projecten'); ?>">Projecten</a></li>
-                    <li><a href="<?php echo site_url('/over-ons'); ?>">Over ons</a></li>
-                    <li><a href="<?php echo site_url('/faq'); ?>">FAQ</a></li>
-                </ul> 
+                <?php
+                $menu_location = 'footer';
+                wp_nav_menu(array(
+                    'theme_location' => $menu_location,
+                    'container' => false, 
+                    'menu_class' => 'menu', 
+                ));
+                ?>
             </div>
             <div class="socials">
                <img src="<?php echo get_theme_file_uri('/assets/images/icons/instagram.svg') ?>" alt="Bekijk onze instagram" title="Bekijk onze instagram" />

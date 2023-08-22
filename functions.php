@@ -18,7 +18,8 @@ function mx_setup() {
       register_nav_menus(
           array(
               'my-custom-menu' => _( 'My Custom Menu' ),
-              'my-custom-menu-2' =>_('My Second Custom Menu')
+              'my-custom-menu-2' =>_('My Second Custom Menu'),
+              'footer' =>_('Footer menu')
           )
       );
   }
